@@ -1,0 +1,667 @@
+main.homepage {
+    section.homebanner {
+        height: 807px;
+        position: relative;
+
+        @include media-breakpoint-down(sm) {
+            height: 600px;
+        }
+    }
+
+    section.inclusions {
+        .description {
+            ul {
+                @include media-breakpoint-up(md) {
+                    column-count: 2;
+                }
+
+                li {
+                    list-style: none;
+                    position: relative;
+                    padding: 9px 0;
+
+                    &::before {
+                        content: "";
+                        width: 21px;
+                        height: 16px;
+                        position: absolute;
+                        background-image: url('data:image/svg+xml,<svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.09814 7.86885L8.24569 14.0164L18.4916 1.72131" stroke="%230061E0" stroke-width="2.45902" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+                        top: 14px;
+                        left: -36px;
+                    }
+                }
+            }
+        }
+    }
+
+    section.about {
+        .heroImage1 {
+            .absolute-img {
+                left: -100px;
+                top: 25%;
+            }
+        }
+    }
+
+    section.process {
+        .dotted-vector {
+            top: 26px;
+
+            @include media-breakpoint-down(sm) {
+                top: 316px;
+                left: 50px;
+            }
+        }
+
+        .processCard {
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+            @include media-breakpoint-up(md) {
+                height: 100%;
+            }
+        }
+    }
+
+    section.testimonials {
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: -400px;
+        }
+
+        .testimonial-slider {
+            transform: translateY(-128px);
+            z-index: 100;
+
+            @include media-breakpoint-up(md) {
+                transform: translateY(-170px);
+            }
+
+            @include media-breakpoint-up(lg) {
+                transform: translateY(-370px);
+            }
+
+            .testimonial-card {
+                margin: 50px 0;
+                padding: 24px 16px;
+                border-radius: 10.999px;
+                background: $white;
+                position: relative;
+
+                @include media-breakpoint-up(md) {
+                    box-shadow: 0px 4.4px 10.999px 0px rgba(0, 0, 0, 0.30);
+                    margin: 50px 16px;
+                    padding: 24px 30px;
+                }
+
+                .initial {
+                    height: 95px;
+                    width: 95px;
+                    background: $primary;
+                    color: $white;
+                    font-size: 42px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 1000px;
+                    position: absolute;
+                    left: 30px;
+                    top: -45px;
+
+                    @include media-breakpoint-down(sm) {
+                        height: 76px;
+                        width: 76px;
+                        font-size: 34px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+main.processPage {
+    .number {
+        height: 200px;
+        width: 200px;
+        filter: drop-shadow(0px 4px 9px #90C8F9);
+        background: $white;
+        border-radius: 300px;
+        position: absolute;
+        right: -100px;
+        top: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 120px;
+        font-weight: 700;
+        color: $primary;
+        line-height: 0.9;
+
+        @include media-breakpoint-down(xl) {
+            top: -20px;
+            right: 0;
+            height: 100px;
+            width: 100px;
+            font-size: 50px;
+        }
+
+        @include media-breakpoint-down(lg) {
+            height: 150px;
+            width: 150px;
+            font-size: 70px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            height: 100px;
+            width: 100px;
+            font-size: 50px;
+        }
+    }
+
+    section.serviceCta {
+        background: linear-gradient($dark-grey 0% 87%, $white 87% 100%);
+    }
+}
+
+main.faqPage {
+    ul.faqTypeNav {
+        padding-inline-start: 0;
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            flex-grow: 1;
+
+            .faqTypeNavBtn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                border: none;
+                height: 78px;
+                border-radius: 20px;
+                background: none;
+                transition: 0.2s all;
+                color: $dark-grey;
+
+                svg {
+                    color: $primary;
+                }
+
+                &.active {
+                    background: $primary;
+                    color: $white;
+
+                    svg {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    section.faqs {
+        .faqSearch {
+            outline: none;
+
+            &::placeholder {
+                color: $primary;
+            }
+        }
+
+        .accordion-container {
+            width: 100%;
+
+            .accordion-card {
+                transition: 0.2s all;
+                padding: 57px 75px;
+                background: $light;
+                border-radius: 45px;
+                margin-bottom: 48px;
+                line-height: 1.625;
+                cursor: pointer;
+
+                @include media-breakpoint-down(xl) {
+                    padding: 35px 24px;
+                    margin-bottom: 26px;
+                }
+
+                @include media-breakpoint-down(lg) {
+                    padding: 35px 16px;
+                    margin-bottom: 26px;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    border-radius: 33px;
+                    padding: 26px;
+                }
+
+                .accordion-head {
+                    font-weight: 600;
+                    font-size: 27px;
+                    color: $primary;
+                    text-transform: uppercase;
+
+                    @include media-breakpoint-down(lg) {
+                        font-size: 1.125rem;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        font-size: 16px;
+                    }
+                }
+
+                .plusminus {
+                    height: 75px;
+                    width: 75px;
+                    color: $primary;
+                    border-radius: 100px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: 0.2s all;
+
+                    @include media-breakpoint-down(sm) {
+                        height: 35px;
+                        width: 35px;
+                        transform: rotate(45deg);
+                    }
+                }
+
+                &.active {
+                    background: $tertiary;
+
+                    .plusminus {
+                        background: $primary;
+                        transform: rotate(45deg);
+                        color: $white;
+
+                        @include media-breakpoint-down(sm) {
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+
+                .accordion-body {
+                    display: none;
+                    font-size: 20px;
+                    line-height: 2;
+                    color: $grey;
+                    padding-top: 23px;
+
+                    @include media-breakpoint-down(lg) {
+                        font-size: 1rem;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        font-size: 0.875rem;
+                    }
+
+                    a {
+                        color: $primary !important;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+main.aboutUsPage {
+    section.serviceCta {
+        background: linear-gradient($dark-grey 0% 87%, $white 87% 100%);
+    }
+}
+
+main.grannyFlatsPage {
+    section.gallery {
+        @include media-breakpoint-down(sm) {
+            background: $dark-grey;
+        }
+
+        .grannyFlatGallery {
+            .slick-list {
+                height: 100%;
+            }
+
+            .slick-track {
+                height: 100%;
+                display: flex;
+            }
+
+            .slick-slide {
+                height: inherit;
+            }
+        }
+
+        .grannyFlatGalleryNav {
+            .slick-track {
+                display: flex;
+            }
+
+            .slick-slide {
+                height: inherit;
+                margin: 0 9px;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+        }
+
+        @include media-breakpoint-up(md) {
+            .left-container {
+                border-radius: 10px 0 0 10px;
+                overflow: hidden;
+            }
+        }
+
+        .right-container {
+            height: 850px;
+
+            @include media-breakpoint-down(sm) {
+                height: 350px;
+            }
+        }
+    }
+
+    section.introduction {
+        .heroImage1 {
+            .absolute-img {
+                left: -100px;
+                top: 75px;
+            }
+        }
+
+        .heroImage2 {
+            height: 433px;
+        }
+    }
+
+    section.service {
+        .serviceCard {
+            height: 450px;
+
+            .overlay {
+                background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+            }
+        }
+    }
+}
+
+main.galleryPage {
+    .gallerySlider {
+        .slick-track {
+            display: flex;
+        }
+
+        .slick-slide {
+            height: inherit;
+            margin: 0 2px;
+
+            @include media-breakpoint-up(md) {
+                margin: 0 13px;
+            }
+
+            .image {
+                border-radius: 6px;
+                overflow: hidden;
+
+                @include media-breakpoint-up(md) {
+                    border-radius: 20px;
+                    height: 482px;
+                    width: 657px;
+                }
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+    }
+}
+
+main.projectPage {
+    section.list {
+        .projectGalleryNavSlider {
+            .slick-slide {
+                border-radius: 7px;
+                overflow: hidden;
+                margin: 0 9px;
+                height: 88px;
+                opacity: 0.5;
+
+                @include media-breakpoint-down(sm) {
+                    margin: 0 2px;
+                }
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+
+                &.slick-current {
+                    opacity: 1;
+                }
+
+            }
+        }
+
+        .projectGalleryImageSlider {
+            .slick-slide {
+                height: 573px;
+                border-radius: 11px;
+                overflow: hidden;
+
+                @include media-breakpoint-down(sm) {
+                    height: 250px;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+    }
+
+    section.introduction {
+        background: linear-gradient($white 0 40%, $dark-grey 40% 100%);
+
+        .heroImage {
+            height: 808px;
+            border-radius: 20px;
+
+            @include media-breakpoint-down(sm) {
+                border-radius: 10px 10px 0 0;
+                height: 342px;
+            }
+        }
+
+        .content {
+            border-radius: 0 20px 20px 0;
+
+            @include media-breakpoint-down(sm) {
+                border-radius: 0 0 10px 10px;
+            }
+        }
+    }
+
+    section.services {
+        .serviceCard {
+            height: 450px;
+
+            .overlay {
+                background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+            }
+        }
+    }
+}
+
+main.testimonialsPage {
+    section.testimonials {
+
+        .heroVideo {
+            position: absolute;
+            height: 81.7%;
+            left: 5.5%;
+            top: 5.8%;
+            width: 82.1%;
+        }
+
+        .testimonialSlider {
+            .slick-slide {
+                margin: 0 2px;
+                width: 235px;
+                height: 131px;
+
+                iframe {
+                    height: 100%;
+                    width: 100%;
+                }
+
+                @include media-breakpoint-up(md) {
+                    margin: 0 10px;
+                    height: 278px;
+                    width: 497px;
+                }
+            }
+        }
+    }
+}
+
+main.contactPage {
+    .section-help {
+        background: linear-gradient($white 0 50%, $light-black 50% 100%);
+    }
+}
+
+main.areasPage {
+    .suburbListContainer {
+        max-height: 850px;
+        overflow-y: scroll;
+
+        ul.suburbList {
+            column-count: 4;
+
+            @include media-breakpoint-down(xl) {
+                column-count: 3;
+            }
+
+            @include media-breakpoint-down(sm) {
+                column-count: 2;
+            }
+
+            li {
+                list-style: disc;
+                color: $primary;
+
+                a {
+                    line-height: 1.67;
+                    text-decoration-line: underline;
+                }
+            }
+        }
+    }
+}
+
+main.suburbPage {
+    section.introduction {
+        .heroImage {
+            @include media-breakpoint-up(lg) {
+                border-radius: 20px;
+                height: 808px;
+            }
+
+            border-radius: 20px 20px 0 0;
+
+            @include media-breakpoint-down(sm) {
+                border-radius: 10px 10px 0 0;
+                height: 342px;
+            }
+        }
+
+        .content {
+            border-radius: 0 20px 20px 0;
+
+            @include media-breakpoint-down(lg) {
+                border-radius: 0 0 20px 20px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                border-radius: 0 0 10px 10px;
+            }
+        }
+    }
+
+    section.whyUs {
+        .whyUsCard {
+            height: 450px;
+
+            .overlay {
+                background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+            }
+        }
+    }
+
+    section.process {
+        .processCard {
+            .icon {
+                height: 140px;
+                width: 140px;
+                box-shadow: 6.41px 8.974px 20.513px 1.282px rgba(134, 134, 134, 0.16);
+            }
+        }
+
+        .about {
+            .aboutCard {
+                .image {
+                    filter: blur(2px);
+                }
+            }
+        }
+    }
+}
+
+main.blogsPage {
+    .blogCard {
+        .mainImage {
+            height: 312px;
+        }
+    }
+}
+
+// commons
+
+main.grannyFlatsPage,
+main.projectPage,
+main.suburbPage {
+    section.faq {
+        #grannyFlatFaqSlider {
+            .slick-track {
+                display: flex;
+            }
+
+            .slick-slide {
+                height: inherit;
+                background: $dark-grey;
+                border-radius: 11px;
+                padding: 47px;
+                margin: 0 14px;
+
+                @include media-breakpoint-down(lg) {
+                    padding: 35px 24px;
+                    margin: 0 6px;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    margin: 0 2px;
+                }
+            }
+        }
+    }
+}
