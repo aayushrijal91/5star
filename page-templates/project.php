@@ -35,24 +35,125 @@ if ($post) {
                 $index = 1; ?>
                 <?php while ($project->have_posts()) :
                     $project->the_post(); ?>
-                    <div class="bg-dark-grey text-white rounded-md-11 px-3 px-md-4 px-xl-5 py-5 py-md-7 py-md-4 mt-md-9">
+                    <div class="galleryWrapper bg-dark-grey text-white rounded-md-11 px-3 px-md-4 px-xl-5 py-5 py-md-7 py-md-4 mt-md-9">
                         <?php if (!empty(get_field('photo_gallery'))) : ?>
                             <div class="bg-black p-2 p-md-3 rounded-4 rounded-md-11">
                                 <div class="projectGalleryNavSlider">
-                                    <?php foreach (get_field('photo_gallery') as $photo) : ?>
-                                        <div>
-                                            <img src="<?= $photo['url'] ?>" alt="<?= $photo['alt'] ?>">
-                                        </div>
-                                    <?php endforeach; ?>
+                                    <?php if (get_field('photo_gallery')) :
+                                        foreach (get_field('photo_gallery') as $photo) : ?>
+                                            <div class="project-photos">
+                                                <img src="<?= $photo['url'] ?>" alt="<?= $photo['alt'] ?>">
+                                            </div>
+                                    <?php endforeach;
+                                    endif; ?>
+
+                                    <?php if (get_field('floorplan_gallery')) :
+                                        foreach (get_field('floorplan_gallery') as $floorplan) : ?>
+                                            <div class="project-floorplan">
+                                                <img src="<?= $floorplan['url'] ?>" alt="<?= $floorplan['alt'] ?>">
+                                            </div>
+                                    <?php endforeach;
+                                    endif; ?>
+
+                                    <?php if (get_field('video_gallery')) :
+                                        foreach (get_field('video_gallery') as $video) : ?>
+                                            <div class="project-video">
+                                                <img src="<?= $video['url'] ?>" alt="<?= $video['alt'] ?>">
+                                            </div>
+                                    <?php endforeach;
+                                    endif; ?>
                                 </div>
                             </div>
 
-                            <div class="projectGalleryImageSlider mt-2">
-                                <?php foreach (get_field('photo_gallery') as $photo) : ?>
-                                    <div>
-                                        <img src="<?= $photo['url'] ?>" alt="<?= $photo['alt'] ?>">
-                                    </div>
-                                <?php endforeach; ?>
+                            <div class="position-relative mt-2 overflow-hidden rounded-11">
+                                <div class="position-absolute end-0 top-0 px-4 z-100 bg-white bg-opacity-50">
+                                    <ul class="ps-0">
+                                        <li>
+                                            <button data-filter="photos" type="button" class="projectfilter w-100 h-100 border-0 bg-transparent text-start py-4 fw-700">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="none">
+                                                    <path d="M6.896 7.66459C6.896 8.86041 7.86895 9.83336 9.06477 9.83336C10.2608 9.83336 11.2338 8.86041 11.2338 7.66459C11.2338 6.46856 10.2608 5.49561 9.06477 5.49561C7.86895 5.49561 6.896 6.46856 6.896 7.66459ZM10.1859 7.66459C10.1859 8.28266 9.68305 8.78551 9.06477 8.78551C8.4467 8.78551 7.94385 8.28266 7.94385 7.66459C7.94385 7.04631 8.4467 6.54346 9.06477 6.54346C9.68305 6.54346 10.1859 7.04631 10.1859 7.66459Z" fill="currentColor" />
+                                                    <path d="M18.2002 1.96094C18.3385 1.96094 18.4732 1.90487 18.5706 1.80745C18.668 1.71003 18.7241 1.57475 18.7241 1.43701C18.7241 1.29866 18.6683 1.164 18.5706 1.06658C18.4732 0.968549 18.3385 0.913086 18.2002 0.913086C18.0625 0.913086 17.9274 0.968549 17.83 1.06658C17.7323 1.164 17.6763 1.29866 17.6763 1.43701C17.6763 1.57475 17.7323 1.71003 17.83 1.80745C17.9274 1.90487 18.0625 1.96094 18.2002 1.96094Z" fill="currentColor" />
+                                                    <path d="M24.3656 0.912109H20.0868C19.7976 0.912109 19.5629 1.14665 19.5629 1.43604C19.5629 1.72543 19.7976 1.95997 20.0868 1.95997H24.3656C25.2324 1.95997 25.9374 2.66502 25.9374 3.53175V18.1469L17.4373 9.64657C17.2326 9.44211 16.9009 9.44211 16.6962 9.64657L11.1672 15.1756L9.84464 13.8533C9.74641 13.7551 9.61317 13.6998 9.47421 13.6998C9.33524 13.6998 9.20201 13.7551 9.10357 13.8533L1.3613 21.5956C1.26307 21.3905 1.20801 21.1611 1.20801 20.919V3.53175C1.20801 2.66502 1.91306 1.95997 2.7798 1.95997H16.105C16.3944 1.95997 16.6289 1.72543 16.6289 1.43604C16.6289 1.14665 16.3944 0.912109 16.105 0.912109H2.7798C1.33531 0.912109 0.160156 2.08726 0.160156 3.53175V20.919C0.160156 21.6241 0.440744 22.2646 0.895498 22.7362C0.905526 22.748 0.915759 22.7597 0.927015 22.771C0.937862 22.7818 0.949323 22.7916 0.960784 22.8015C1.43232 23.2572 2.07372 23.5386 2.7798 23.5386H24.3656C25.8101 23.5386 26.9853 22.3635 26.9853 20.919V3.53175C26.9853 2.08726 25.8101 0.912109 24.3656 0.912109ZM24.3656 22.4908H2.7798C2.53728 22.4908 2.30724 22.4353 2.10197 22.3369L9.474 14.9646L10.7965 16.2869V16.2874H10.7967L14.1202 19.6108C14.3248 19.8155 14.6566 19.8155 14.861 19.6108C15.0657 19.4062 15.0657 19.0744 14.861 18.8697L11.908 15.9167L17.0667 10.7581L25.9194 19.6106C25.9251 19.6166 25.9315 19.6215 25.9374 19.627V20.9188C25.9374 21.7855 25.2324 22.4908 24.3656 22.4908Z" fill="currentColor" />
+                                                    <path d="M16.0078 20.2339C15.8695 20.2339 15.7348 20.2893 15.6374 20.3874C15.5393 20.4848 15.4839 20.6195 15.4839 20.7578C15.4839 20.8956 15.5393 21.0302 15.6374 21.1282C15.7348 21.2257 15.8695 21.2817 16.0078 21.2817C16.1456 21.2817 16.2806 21.2257 16.3782 21.1282C16.4757 21.0302 16.5317 20.8956 16.5317 20.7578C16.5317 20.6195 16.4757 20.4848 16.3782 20.3874C16.2806 20.2893 16.1456 20.2339 16.0078 20.2339Z" fill="currentColor" />
+                                                </svg>
+                                                Photos
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button data-filter="floorplan" type="button" class="projectfilter w-100 h-100 border-0 bg-transparent text-start py-4 fw-700">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                                                    <path d="M25.0242 0.914966C19.0975 0.901706 6.98086 0.963599 1.00331 0.944823C0.797498 0.943613 0.62963 1.10945 0.62842 1.31531V1.31976C0.633936 8.30593 0.62842 18.4617 0.62842 25.3185C0.627791 25.5256 0.795175 25.694 1.00224 25.6945H17.6112C17.8182 25.6952 17.9866 25.5278 17.9872 25.3207C17.9872 25.32 17.9872 25.3192 17.9872 25.3185V19.29H25.0243C25.2319 19.29 25.4003 19.1217 25.4003 18.914V1.29208C25.4009 1.08443 25.233 0.915546 25.0253 0.914966C25.0249 0.914966 25.0245 0.914966 25.0242 0.914966ZM24.6515 18.5369H17.9916V17.0992C17.9916 16.8922 17.8237 16.7243 17.6166 16.7243C17.4096 16.7243 17.2417 16.8922 17.2417 17.0992V24.9348H6.19567V23.4971C6.19552 23.2894 6.02703 23.1212 5.81938 23.1213C5.61193 23.1214 5.44382 23.2896 5.44362 23.4971V24.9348H1.3793V19.29H5.44362V20.7023C5.44377 20.91 5.61227 21.0782 5.81991 21.0781C6.02737 21.0779 6.19548 20.9098 6.19567 20.7023V17.0959C6.19552 16.8882 6.02703 16.72 5.81938 16.7201C5.61193 16.7203 5.44382 16.8884 5.44362 17.0959V18.5336H1.3793V12.8889H5.44362V14.3366C5.44377 14.5442 5.61227 14.7125 5.81991 14.7123C6.02737 14.7122 6.19548 14.544 6.19567 14.3366V12.8889H8.65418C8.86154 12.8776 9.0205 12.7004 9.00927 12.4931C8.99887 12.3014 8.84581 12.1484 8.65418 12.138H1.3793V1.69464H13.8266V12.138H11.3936C11.1862 12.1492 11.0272 12.3265 11.0385 12.5338C11.0489 12.7254 11.2019 12.8785 11.3936 12.8889H17.2428V14.3266C17.2426 14.5337 17.4103 14.7017 17.6173 14.702C17.8243 14.7022 17.9924 14.5345 17.9926 14.3275C17.9926 14.3272 17.9926 14.3269 17.9926 14.3267V12.889H19.9645C20.1719 12.8777 20.3309 12.7005 20.3196 12.4931C20.3092 12.3015 20.1562 12.1484 19.9645 12.138H14.5787V1.66812H24.6515V12.138H22.6442C22.4369 12.1267 22.2596 12.2858 22.2484 12.4931C22.2371 12.7005 22.3961 12.8777 22.6035 12.889C22.6171 12.8897 22.6307 12.8897 22.6443 12.889H24.6515L24.6515 18.5369Z" fill="currentColor" />
+                                                </svg>
+                                                Floorplan
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button data-filter="video" type="button" class="projectfilter w-100 h-100 border-0 bg-transparent text-start py-4 fw-700">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="21" viewBox="0 0 30 21" fill="none">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.21944 12.3608C1.52944 12.3608 1.78068 12.1095 1.78068 11.7995V3.06418C1.78068 2.48628 2.25093 2.01603 2.82883 2.01603H27.2006C27.7785 2.01603 28.2487 2.48628 28.2487 3.06418V4.78166C28.2487 5.09143 28.5 5.34289 28.8099 5.34289C29.1199 5.34289 29.3712 5.09143 29.3712 4.78166V3.06418C29.3712 1.86739 28.3974 0.893555 27.2006 0.893555H2.82883C1.63204 0.893555 0.658203 1.86739 0.658203 3.06418V11.7995C0.658203 12.1095 0.909444 12.3608 1.21944 12.3608Z" fill="currentColor" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M28.8099 8.79883C28.5 8.79883 28.2487 9.05029 28.2487 9.36007V18.0956C28.2487 18.6735 27.7785 19.1438 27.2006 19.1438H2.82883C2.25093 19.1438 1.78068 18.6735 1.78068 18.0956V16.3782C1.78068 16.0682 1.52944 15.8169 1.21944 15.8169C0.909444 15.8169 0.658203 16.0682 0.658203 16.3782V18.0956C0.658203 19.2924 1.63204 20.2663 2.82883 20.2663H27.2006C28.3974 20.2663 29.3712 19.2924 29.3712 18.0956V9.36007C29.3712 9.05029 29.1199 8.79883 28.8099 8.79883Z" fill="currentColor" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4195 5.61933C11.2459 5.51914 11.0319 5.51914 10.8583 5.61933C10.6846 5.71952 10.5776 5.90477 10.5776 6.10537V15.0554C10.5776 15.2559 10.6846 15.4412 10.8583 15.5414C10.9451 15.5916 11.042 15.6166 11.1389 15.6166C11.2358 15.6166 11.3327 15.5916 11.4195 15.5414L19.1705 11.0664C19.3441 10.9662 19.4511 10.781 19.4511 10.5804C19.4511 10.38 19.3441 10.1947 19.1705 10.0943L11.4195 5.61933ZM11.7001 14.0835V7.07745L17.7676 10.5804L11.7001 14.0835Z" fill="currentColor" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.21939 14.6614C1.53465 14.6614 1.79181 14.4043 1.79181 14.089C1.79181 13.7738 1.53465 13.5166 1.21939 13.5166C0.904133 13.5166 0.646973 13.7738 0.646973 14.089C0.646973 14.4043 0.904133 14.6614 1.21939 14.6614Z" fill="currentColor" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M28.8097 6.49829C28.4945 6.49829 28.2373 6.75545 28.2373 7.07071C28.2373 7.38597 28.4945 7.64313 28.8097 7.64313C29.125 7.64313 29.3821 7.38597 29.3821 7.07071C29.3821 6.75545 29.125 6.49829 28.8097 6.49829Z" fill="currentColor" />
+                                                </svg>
+                                                Video
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button data-filter="all" type="button" class="projectfilter w-100 h-100 border-0 bg-transparent text-start py-4 fw-700 text-center">
+                                                All
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="position-absolute end-0 bottom-0 p-4 z-100">
+                                    <ul class="d-flex justify-content-end gap-3 ps-0">
+                                        <li>
+                                            <a href="javascript:void(0)" class="gallerySliderPrev">
+                                                <svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="0.688071" y="0.688071" width="65.7006" height="65.7006" rx="6.37264" stroke="#ffffff" stroke-width="1.37614" />
+                                                    <path d="M24.0039 32.5857H44.5513C44.92 32.5857 45.2736 32.7322 45.5343 32.9929C45.795 33.2536 45.9414 33.6071 45.9414 33.9758C45.9414 34.3445 45.795 34.698 45.5343 34.9587C45.2736 35.2194 44.92 35.3659 44.5513 35.3659H24.0039L28.9865 40.3469L28.9866 40.3469C29.2475 40.6079 29.394 40.9617 29.394 41.3307C29.394 41.6997 29.2475 42.0535 28.9866 42.3144L28.6537 41.9816L28.9866 42.3145C28.7257 42.5754 28.3718 42.7219 28.0028 42.7219C27.6338 42.7219 27.28 42.5754 27.0191 42.3145L27.3519 41.9816L27.0191 42.3145L19.6646 34.96C19.6645 34.9599 19.6644 34.9598 19.6644 34.9598L19.6642 34.9595L19.997 34.6267C19.9114 34.5413 19.8435 34.4398 19.7971 34.3282C19.7508 34.2165 19.7269 34.0967 19.7269 33.9758C19.7269 33.8549 19.7508 33.7351 19.7971 33.6234C19.8435 33.5117 19.9114 33.4103 19.997 33.3249M24.0039 32.5857L19.6642 32.992L19.997 33.3249M24.0039 32.5857H23.3381L28.6537 27.2718C28.8264 27.0992 28.9233 26.865 28.9233 26.6209C28.9233 26.3768 28.8264 26.1426 28.6537 25.97C28.4811 25.7973 28.247 25.7004 28.0028 25.7004C27.7587 25.7004 27.5245 25.7973 27.3519 25.97L19.997 33.3249M24.0039 32.5857L28.9865 27.6047L28.9866 27.6046C29.2475 27.3437 29.394 26.9899 29.394 26.6209C29.394 26.2519 29.2475 25.898 28.9866 25.6371C28.7257 25.3762 28.3718 25.2297 28.0028 25.2297C27.6338 25.2297 27.28 25.3762 27.0191 25.6371L19.6646 32.9916L19.997 33.3249" fill="#ffffff" stroke="#ffffff" stroke-width="0.941427" />
+                                                </svg>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="javascript:void(0)" class="gallerySliderNext">
+                                                <svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="0.921875" width="67.0767" height="67.0767" rx="7.06071" fill="#0061E0" />
+                                                    <path d="M43.0566 33.323H22.5092C22.1405 33.323 21.787 33.4695 21.5263 33.7302C21.2656 33.9909 21.1191 34.3444 21.1191 34.7131C21.1191 35.0818 21.2656 35.4353 21.5263 35.696C21.787 35.9567 22.1405 36.1032 22.5092 36.1032H43.0566L38.074 41.0842L38.074 41.0842C37.8131 41.3452 37.6665 41.699 37.6665 42.068C37.6665 42.437 37.8131 42.7908 38.074 43.0518L38.4068 42.7189L38.074 43.0518C38.3349 43.3127 38.6888 43.4592 39.0577 43.4592C39.4267 43.4592 39.7806 43.3127 40.0415 43.0518L39.7086 42.7189L40.0415 43.0518L47.396 35.6973C47.396 35.6972 47.3961 35.6971 47.3962 35.6971L47.3964 35.6969L47.0635 35.364C47.1492 35.2786 47.2171 35.1772 47.2634 35.0655C47.3098 34.9538 47.3336 34.834 47.3336 34.7131C47.3336 34.5922 47.3098 34.4724 47.2634 34.3607C47.2171 34.249 47.1492 34.1476 47.0635 34.0622M43.0566 33.323L47.3964 33.7293L47.0635 34.0622M43.0566 33.323H43.7224L38.4068 28.0091C38.2342 27.8365 38.1372 27.6023 38.1372 27.3582C38.1372 27.1141 38.2342 26.8799 38.4068 26.7073C38.5795 26.5347 38.8136 26.4377 39.0577 26.4377C39.3019 26.4377 39.536 26.5347 39.7086 26.7073L47.0635 34.0622M43.0566 33.323L38.074 28.342L38.074 28.3419C37.8131 28.081 37.6665 27.7272 37.6665 27.3582C37.6665 26.9892 37.8131 26.6353 38.074 26.3744C38.3349 26.1135 38.6888 25.967 39.0577 25.967C39.4267 25.967 39.7806 26.1135 40.0415 26.3744L47.396 33.7289L47.0635 34.0622" fill="white" stroke="white" stroke-width="0.941427" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="projectGalleryImageSlider">
+                                    <?php if (get_field('photo_gallery')) :
+                                        foreach (get_field('photo_gallery') as $photo) : ?>
+                                            <div class="project-photos">
+                                                <img src="<?= $photo['url'] ?>" alt="<?= $photo['alt'] ?>">
+                                            </div>
+                                    <?php endforeach;
+                                    endif; ?>
+
+                                    <?php if (get_field('floorplan_gallery')) :
+                                        foreach (get_field('floorplan_gallery') as $floorplan) : ?>
+                                            <div class="project-floorplan">
+                                                <img src="<?= $floorplan['url'] ?>" alt="<?= $floorplan['alt'] ?>">
+                                            </div>
+                                    <?php endforeach;
+                                    endif; ?>
+
+                                    <?php if (get_field('video_gallery')) :
+                                        foreach (get_field('video_gallery') as $video) : ?>
+                                            <div class="project-video">
+                                                <img src="<?= $video['url'] ?>" alt="<?= $video['alt'] ?>">
+                                            </div>
+                                    <?php endforeach;
+                                    endif; ?>
+                                </div>
                             </div>
                         <?php endif; ?>
 
@@ -194,156 +295,158 @@ if ($post) {
         </section>
     <?php endif; ?>
 
-    <section class="services bg-tertiary py-6 py-md-9">
-        <div class="container">
-            <?php if (have_rows('services')) : ?>
-                <div class="row gy-4 mb-5 d-md-none">
-                    <?php while (have_rows('services')) : the_row(); ?>
-                        <div class="col-12">
-                            <img class="w-100 rounded-6" src="<?= get_sub_field('image')['url'] ?>" alt="<?= get_sub_field('image')['alt'] ?>">
+    <?php if (have_rows('services') || have_rows('why_us')) : ?>
+        <section class="services bg-tertiary py-6 py-md-9">
+            <div class="container">
+                <?php if (have_rows('services')) : ?>
+                    <div class="row gy-4 mb-5 d-md-none">
+                        <?php while (have_rows('services')) : the_row(); ?>
+                            <div class="col-12">
+                                <img class="w-100 rounded-6" src="<?= get_sub_field('image')['url'] ?>" alt="<?= get_sub_field('image')['alt'] ?>">
 
-                            <p class="fs-24 fw-600 font-poppins py-3"><?= get_sub_field('title') ?></p>
+                                <p class="fs-24 fw-600 font-poppins py-3"><?= get_sub_field('title') ?></p>
 
-                            <article class="fs-14 fw-500 lh-1_67">
-                                <?= get_sub_field('description') ?>
-                            </article>
-                        </div>
-                    <?php endwhile; ?>
-                </div>
-            <?php endif; ?>
+                                <article class="fs-14 fw-500 lh-1_67">
+                                    <?= get_sub_field('description') ?>
+                                </article>
+                            </div>
+                        <?php endwhile; ?>
+                    </div>
+                <?php endif; ?>
 
-            <?php if (have_rows('services')) :
-                $counter = 0; ?>
-                <div class="row g-4 mb-10 d-none d-md-flex">
-                    <?php while (have_rows('services')) : the_row(); ?>
-                        <div class="<?= $counter == 0 ? 'col-12' : 'col-md-6' ?>">
-                            <div class="serviceCard rounded-11 position-relative overflow-hidden">
-                                <img class="h-100 w-100 position-absolute top-0" src="<?= get_sub_field('image')['url'] ?>" alt="<?= get_sub_field('image')['alt'] ?>">
+                <?php if (have_rows('services')) :
+                    $counter = 0; ?>
+                    <div class="row g-4 mb-10 d-none d-md-flex">
+                        <?php while (have_rows('services')) : the_row(); ?>
+                            <div class="<?= $counter == 0 ? 'col-12' : 'col-md-6' ?>">
+                                <div class="serviceCard rounded-11 position-relative overflow-hidden">
+                                    <img class="h-100 w-100 position-absolute top-0" src="<?= get_sub_field('image')['url'] ?>" alt="<?= get_sub_field('image')['alt'] ?>">
 
-                                <div class="overlay position-relative h-100 p-5 text-white d-flex align-items-end">
-                                    <div class="<?= $counter == 0 ? 'col-xl-9' : '' ?>">
-                                        <p class="fs-30 fw-600 font-poppins"><?= get_sub_field('title') ?></p>
-                                        <article class="fs-18 fw-500 pt-3 lh-1_67">
-                                            <?= get_sub_field('description') ?>
-                                        </article>
+                                    <div class="overlay position-relative h-100 p-5 text-white d-flex align-items-end">
+                                        <div class="<?= $counter == 0 ? 'col-xl-9' : '' ?>">
+                                            <p class="fs-30 fw-600 font-poppins"><?= get_sub_field('title') ?></p>
+                                            <article class="fs-18 fw-500 pt-3 lh-1_67">
+                                                <?= get_sub_field('description') ?>
+                                            </article>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    <?php
-                        $counter++;
-                    endwhile; ?>
-                </div>
-            <?php endif; ?>
-
-            <?php if (have_rows('why_us')) :
-                $counter = 0;
-            ?>
-                <div class="bg-dark-grey rounded-17 overflow-hidden">
-                    <?php while (have_rows('why_us')) : the_row(); ?>
-                        <div class="row g-0">
-                            <div class="col-lg-6 d-flex align-items-center <?= $counter % 2 ? 'order-2' : 'order-2 order-md-1' ?>">
-                                <div class="text-white px-3 py-5 col-lg-9 mx-auto">
-                                    <p class="fs-30 fs-md-48 fw-600 lh-1"><?= get_sub_field('title'); ?></p>
-                                    <article class="fs-18 fw-500 lh-1_67 mt-5 description">
-                                        <?= get_sub_field('description'); ?>
-                                    </article>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 <?= $counter % 2 ? 'order-1' : 'order-1 order-md-2' ?>">
-                                <div class="h-100">
-                                    <img class="w-100 h-100 object-cover-fit" src="<?= get_sub_field('image')['url'] ?>" alt="<?= get_sub_field('image')['alt'] ?>">
-                                </div>
-                            </div>
-                        </div>
-                    <?php
-                        $counter++;
-                    endwhile; ?>
-                </div>
-            <?php endif; ?>
-        </div>
-    </section>
-
-    <?php $faqs = get_field('faqs'); ?>
-    <section class="faq mt-5 mt-md-9 s">
-        <div class="container">
-            <?php if (!empty($faqs['title'])) : ?>
-                <p class="fs-30 fs-md-45 font-poppins fw-700 text-primary"><?= $faqs['title'] ?></p>
-            <?php endif; ?>
-
-            <div class="row justify-content-between pt-3">
-                <?php if (!empty($faqs['description'])) : ?>
-                    <div class="col-12 col-md-9">
-                        <article class="text-light-grey fs-14 fs-md-18 lh-1_67">
-                            <?= $faqs['description'] ?>
-                        </article>
+                        <?php
+                            $counter++;
+                        endwhile; ?>
                     </div>
                 <?php endif; ?>
 
-                <?php if (!empty($faqs['link'])) : ?>
-                    <div class="col-auto d-none d-md-block">
-                        <a href="<?= $faqs['link'] ?>" class="btn btn-black rounded-10 text-white px-4">View All FAQ's</a>
+                <?php if (have_rows('why_us')) :
+                    $counter = 0;
+                ?>
+                    <div class="bg-dark-grey rounded-17 overflow-hidden">
+                        <?php while (have_rows('why_us')) : the_row(); ?>
+                            <div class="row g-0">
+                                <div class="col-lg-6 d-flex align-items-center <?= $counter % 2 ? 'order-2' : 'order-2 order-md-1' ?>">
+                                    <div class="text-white px-3 py-5 col-lg-9 mx-auto">
+                                        <p class="fs-30 fs-md-48 fw-600 lh-1"><?= get_sub_field('title'); ?></p>
+                                        <article class="fs-18 fw-500 lh-1_67 mt-5 description">
+                                            <?= get_sub_field('description'); ?>
+                                        </article>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 <?= $counter % 2 ? 'order-1' : 'order-1 order-md-2' ?>">
+                                    <div class="h-100">
+                                        <img class="w-100 h-100 object-cover-fit" src="<?= get_sub_field('image')['url'] ?>" alt="<?= get_sub_field('image')['alt'] ?>">
+                                    </div>
+                                </div>
+                            </div>
+                        <?php
+                            $counter++;
+                        endwhile; ?>
                     </div>
                 <?php endif; ?>
             </div>
+        </section>
+    <?php endif; ?>
 
-            <?php if (have_rows('faqs')) :
-                while (have_rows('faqs')) : the_row();
-                    if (have_rows('faqs_list')) : ?>
-                        <div id="grannyFlatFaqSlider" class="my-5 mt-md-7 mb-md-6">
-                            <?php while (have_rows('faqs_list')) : the_row(); ?>
-                                <div>
-                                    <p class="fs-20 fw-700 text-white"><?= get_sub_field('question') ?></p>
+    <?php $faqs = get_field('faqs');
+    if (!empty($faqs['title'])) : ?>
+        <section class="faq mt-5 mt-md-9 s">
+            <div class="container">
+                <p class="fs-30 fs-md-45 font-poppins fw-700 text-primary"><?= $faqs['title'] ?></p>
 
-                                    <article class="text-light-grey fs-14 fs-md-18 lh-1_67 pt-4">
-                                        <?= get_sub_field('answer') ?>
-                                    </article>
-                                </div>
-                            <?php endwhile; ?>
+                <div class="row justify-content-between pt-3">
+                    <?php if (!empty($faqs['description'])) : ?>
+                        <div class="col-12 col-md-9">
+                            <article class="text-light-grey fs-14 fs-md-18 lh-1_67">
+                                <?= $faqs['description'] ?>
+                            </article>
                         </div>
-                        <hr class="border-black border-1 opacity-100" />
-            <?php endif;
-                endwhile;
-            endif; ?>
+                    <?php endif; ?>
 
-            <div class="row align-items-center justify-content-between justify-content-md-end gx-2">
-                <?php if (!empty($faqs['link'])) : ?>
-                    <div class="col-auto d-md-none">
-                        <a href="<?= $faqs['link'] ?>" class="btn btn-black rounded-10 text-white px-4">View All FAQ's</a>
-                    </div>
-                <?php endif; ?>
+                    <?php if (!empty($faqs['link'])) : ?>
+                        <div class="col-auto d-none d-md-block">
+                            <a href="<?= $faqs['link'] ?>" class="btn btn-black rounded-10 text-white px-4">View All FAQ's</a>
+                        </div>
+                    <?php endif; ?>
+                </div>
 
                 <?php if (have_rows('faqs')) :
                     while (have_rows('faqs')) : the_row();
                         if (have_rows('faqs_list')) : ?>
-                            <div class="col-auto">
-                                <div class="row gx-2">
-                                    <div class="col-auto">
-                                        <button id="grannyflatFaqPrev" class="border-0 bg-transparent">
-                                            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="0.47619" y="0.47619" width="54.2857" height="54.2857" rx="9.52381" stroke="#262626" stroke-width="0.952381" />
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M37.6187 27.6188C37.6187 28.2105 37.139 28.6902 36.5472 28.6902L21.3502 28.6902L27.2898 34.3465C27.7164 34.7566 27.7297 35.4349 27.3195 35.8614C26.9094 36.288 26.2311 36.3012 25.8046 35.8911L17.9475 28.3911C17.7374 28.1891 17.6187 27.9102 17.6187 27.6188C17.6187 27.3273 17.7374 27.0485 17.9475 26.8465L25.8046 19.3465C26.2311 18.9363 26.9094 18.9496 27.3195 19.3762C27.7297 19.8027 27.7164 20.481 27.2898 20.8911L21.3502 26.5474L36.5472 26.5474C37.139 26.5474 37.6187 27.0271 37.6187 27.6188Z" fill="#666666" />
-                                            </svg>
-                                        </button>
-                                    </div>
+                            <div id="grannyFlatFaqSlider" class="my-5 mt-md-7 mb-md-6">
+                                <?php while (have_rows('faqs_list')) : the_row(); ?>
+                                    <div>
+                                        <p class="fs-20 fw-700 text-white"><?= get_sub_field('question') ?></p>
 
-                                    <div class="col-auto">
-                                        <button id="grannyflatFaqNext" class="border-0 bg-transparent">
-                                            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="0.761719" width="55.2381" height="55.2381" rx="10" fill="#0061E0" />
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.3804 27.619C18.3804 27.0273 18.8601 26.5476 19.4518 26.5476L34.6488 26.5476L28.7092 20.8913C28.2826 20.4812 28.2693 19.8029 28.6795 19.3764C29.0896 18.9498 29.7679 18.9365 30.1944 19.3467L38.0516 26.8467C38.2616 27.0487 38.3804 27.3276 38.3804 27.619C38.3804 27.9104 38.2616 28.1893 38.0516 28.3913L30.1944 35.8913C29.7679 36.3015 29.0896 36.2882 28.6795 35.8616C28.2693 35.4351 28.2826 34.7568 28.7092 34.3467L34.6488 28.6904L19.4518 28.6904C18.8601 28.6904 18.3804 28.2107 18.3804 27.619Z" fill="white" />
-                                            </svg>
-                                        </button>
+                                        <article class="text-light-grey fs-14 fs-md-18 lh-1_67 pt-4">
+                                            <?= get_sub_field('answer') ?>
+                                        </article>
                                     </div>
-                                </div>
+                                <?php endwhile; ?>
                             </div>
+                            <hr class="border-black border-1 opacity-100" />
                 <?php endif;
                     endwhile;
                 endif; ?>
+
+                <div class="row align-items-center justify-content-between justify-content-md-end gx-2">
+                    <?php if (!empty($faqs['link'])) : ?>
+                        <div class="col-auto d-md-none">
+                            <a href="<?= $faqs['link'] ?>" class="btn btn-black rounded-10 text-white px-4">View All FAQ's</a>
+                        </div>
+                    <?php endif; ?>
+
+                    <?php if (have_rows('faqs')) :
+                        while (have_rows('faqs')) : the_row();
+                            if (have_rows('faqs_list')) : ?>
+                                <div class="col-auto">
+                                    <div class="row gx-2">
+                                        <div class="col-auto">
+                                            <button id="grannyflatFaqPrev" class="border-0 bg-transparent">
+                                                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="0.47619" y="0.47619" width="54.2857" height="54.2857" rx="9.52381" stroke="#262626" stroke-width="0.952381" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M37.6187 27.6188C37.6187 28.2105 37.139 28.6902 36.5472 28.6902L21.3502 28.6902L27.2898 34.3465C27.7164 34.7566 27.7297 35.4349 27.3195 35.8614C26.9094 36.288 26.2311 36.3012 25.8046 35.8911L17.9475 28.3911C17.7374 28.1891 17.6187 27.9102 17.6187 27.6188C17.6187 27.3273 17.7374 27.0485 17.9475 26.8465L25.8046 19.3465C26.2311 18.9363 26.9094 18.9496 27.3195 19.3762C27.7297 19.8027 27.7164 20.481 27.2898 20.8911L21.3502 26.5474L36.5472 26.5474C37.139 26.5474 37.6187 27.0271 37.6187 27.6188Z" fill="#666666" />
+                                                </svg>
+                                            </button>
+                                        </div>
+
+                                        <div class="col-auto">
+                                            <button id="grannyflatFaqNext" class="border-0 bg-transparent">
+                                                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="0.761719" width="55.2381" height="55.2381" rx="10" fill="#0061E0" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.3804 27.619C18.3804 27.0273 18.8601 26.5476 19.4518 26.5476L34.6488 26.5476L28.7092 20.8913C28.2826 20.4812 28.2693 19.8029 28.6795 19.3764C29.0896 18.9498 29.7679 18.9365 30.1944 19.3467L38.0516 26.8467C38.2616 27.0487 38.3804 27.3276 38.3804 27.619C38.3804 27.9104 38.2616 28.1893 38.0516 28.3913L30.1944 35.8913C29.7679 36.3015 29.0896 36.2882 28.6795 35.8616C28.2693 35.4351 28.2826 34.7568 28.7092 34.3467L34.6488 28.6904L19.4518 28.6904C18.8601 28.6904 18.3804 28.2107 18.3804 27.619Z" fill="white" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                    <?php endif;
+                        endwhile;
+                    endif; ?>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    <?php endif; ?>
 
     <div class="mt-5 mt-md-13">
         <?= get_template_part('parts/section', 'followus'); ?>

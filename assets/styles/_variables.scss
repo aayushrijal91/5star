@@ -99,6 +99,15 @@ $font-sizes: (
     12: 12px
 );
 
+$zindex-levels: (
+  n1: -1,
+  0: 0,
+  1: 1,
+  2: 2,
+  3: 3,
+  100: 100,
+);
+
 $border-radius: .25rem !default;
 $border-radius-pill: 50rem !default;
 
@@ -145,7 +154,7 @@ $utilities: map-merge(("line-height":(property: line-height,
                     10: 0.1,
                     25: .25,
                     50: .5,
-                    70: .70,
+                    70: .7,
                     100: 1,
                 )),
             "font-weight": (property: font-weight,

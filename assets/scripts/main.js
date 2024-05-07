@@ -4,7 +4,7 @@ jQuery(function ($) {
     var Engine = {
         ui: {
             misc: function () {
-                $('#slideDownMenuBtn').on('click', function(e) {
+                $('#slideDownMenuBtn').on('click', function (e) {
                     e.preventDefault();
 
                     $('#slide-down-nav').slideToggle();
@@ -157,7 +157,6 @@ jQuery(function ($) {
                         arrows: true,
                         prevArrow: $(this).parents('.gallery_list').find('.gallerySliderPrev'),
                         nextArrow: $(this).parents('.gallery_list').find(".gallerySliderNext"),
-                        // autoplay: true,
                         responsive: [
                             {
                                 breakpoint: 540,
@@ -169,35 +168,47 @@ jQuery(function ($) {
                     });
                 });
 
-                $('.projectGalleryNavSlider').slick({
-                    slidesToShow: 9,
-                    slidesToScroll: 1,
-                    arrows: false,
-                    asNavFor: $('.projectGalleryImageSlider'),
-                    focusOnSelect: true,
-                    responsive: [
-                        {
-                            breakpoint: 900,
-                            settings: {
-                                slidesToShow: 5,
-                                slidesToScroll: 1
-                            }
-                        },
-                        {
-                            breakpoint: 540,
-                            settings: {
-                                slidesToShow: 3,
-                                slidesToScroll: 1
-                            }
-                        }
-                    ]
+                // Initialize all navigation and image sliders
+                $('.projectGalleryNavSlider').each(function (index) {
+                    var navSlider = $(this);
+                    var imageSlider = $('.projectGalleryImageSlider').eq(index);
+
+                    navSlider.slick({
+                        slidesToShow: 9,
+                        slidesToScroll: 1,
+                        arrows: false,
+                        asNavFor: imageSlider,
+                        focusOnSelect: true,
+                        responsive: [
+                            { breakpoint: 900, settings: { slidesToShow: 5, slidesToScroll: 1 } },
+                            { breakpoint: 540, settings: { slidesToShow: 3, slidesToScroll: 1 } }
+                        ]
+                    });
+
+                    imageSlider.slick({
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        asNavFor: navSlider,
+                        prevArrow: navSlider.parents('.galleryWrapper').find('.gallerySliderPrev'),
+                        nextArrow: navSlider.parents('.galleryWrapper').find('.gallerySliderNext')
+                    });
                 });
 
-                $('.projectGalleryImageSlider').slick({
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: false,
-                    asNavFor: $('.projectGalleryNavSlider')
+                $('.projectfilter').on('click', function () {
+                    var filter = $(this).data('filter');
+                    var galleryWrapper = $(this).closest('.galleryWrapper');
+                    var slideNav = galleryWrapper.find(".projectGalleryNavSlider");
+                    var slideImage = galleryWrapper.find('.projectGalleryImageSlider');
+
+                    slideNav.slick('slickUnfilter');
+                    slideImage.slick('slickUnfilter');
+
+                    if (filter === 'all') {
+                    } else {
+                        var filterClass = '.project-' + filter;
+                        slideNav.slick('slickFilter', filterClass);
+                        slideImage.slick('slickFilter', filterClass);
+                    }
                 });
 
                 $('.testimonialSlider').slick({
@@ -206,14 +217,6 @@ jQuery(function ($) {
                     variableWidth: true,
                     prevArrow: $('#testimonialSliderPrev'),
                     nextArrow: $('#testimonialSliderNext'),
-                    // responsive: [
-                    //     {
-                    //         breakpoint: 540,
-                    //         settings: {
-                    //             variableWidth: false,
-                    //         }
-                    //     }
-                    // ]
                 });
             }, // end misc
         }, // end ui

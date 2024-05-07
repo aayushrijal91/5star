@@ -7,6 +7,44 @@ header {
                 text-decoration: underline;
                 text-underline-offset: 8px;
             }
+
+            .nav-item.dropdown {
+                position: relative;
+                padding: 0 20px 0 0;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background: url('data:image/svg+xml,<svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.751953 1L3.25195 3L5.75195 1" stroke="#7CC5E5"/></svg>') center no-repeat;
+                    height: 16px;
+                    width: 16px;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                }
+
+                .sub-menu.dropdown-menu {
+                    --bs-dropdown-min-width: 20rem;
+                    background-color: rgba(255, 255, 255, 0.6) !important;
+                    backdrop-filter: blur(10px);
+                    border: none !important;
+                    border-radius: 10px;
+                    top: 100%;
+                    left: 0;
+                    padding: 0 20px 16px;
+                    flex-direction: column;
+
+                    li {
+                        border-bottom: 1px solid $primary;
+                    }
+                }
+
+                &:hover {
+                    .sub-menu.dropdown-menu {
+                        display: flex;
+                    }
+                }
+            }
         }
     }
 
@@ -19,7 +57,7 @@ section.banner {
     background: $primary;
     display: flex;
     align-items: center;
-    
+
     @include media-breakpoint-up(xl) {
         background: imgUrl('banner.png') right bottom, $primary;
         height: 500px;
@@ -164,36 +202,36 @@ section.unitType {
             border-radius: 20px;
             background: $white;
             box-shadow: 10.271px 12.839px 25.678px 1.284px rgba(152, 152, 152, 0.16);
-    
+
             .image {
                 height: 332px;
                 border-radius: 20px;
                 overflow: hidden;
-    
+
                 @include media-breakpoint-down(lg) {
                     height: 240px;
                     border-radius: 18px;
                 }
-    
+
                 img {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
                 }
-    
+
                 .bedroom {
                     right: 20px;
                     top: 28px;
                 }
             }
-    
+
             .content {
                 padding: 32px;
-    
+
                 @include media-breakpoint-down(lg) {
                     padding: 32px 16px;
                 }
-    
+
                 .btn {
                     height: 48px;
                 }

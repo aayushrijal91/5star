@@ -450,14 +450,19 @@ main.projectPage {
         }
 
         .projectGalleryImageSlider {
-            .slick-slide {
+            .slick-track {
+                display: flex;
                 height: 573px;
-                border-radius: 11px;
-                overflow: hidden;
-
+    
                 @include media-breakpoint-down(sm) {
                     height: 250px;
                 }
+            }
+
+            .slick-slide {
+                height: inherit;
+                border-radius: 11px;
+                overflow: hidden;
 
                 img {
                     width: 100%;
