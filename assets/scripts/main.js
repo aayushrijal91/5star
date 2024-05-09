@@ -245,7 +245,8 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function ($) {
-    var URL = "http://localhost:3000/5star/wp-admin/admin-ajax.php"; //window.location.origin + "/wp-admin/admin-ajax.php";
+    // var URL = "http://localhost:3000/5star/wp-admin/admin-ajax.php";
+    var URL = window.location.origin + "/wp-admin/admin-ajax.php";
 
     $('button.faqTypeNavBtn').on('click', function (e) {
         e.preventDefault();
@@ -253,7 +254,6 @@ jQuery(document).ready(function ($) {
         $('button.faqTypeNavBtn').removeClass('active');
         $(this).addClass('active');
 
-        // AJAX request to load filtered FAQs
         $.ajax({
             url: URL,
             type: 'POST',

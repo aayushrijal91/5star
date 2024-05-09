@@ -9,7 +9,7 @@
 
                     <div class="row justify-content-between py-4 py-lg-5 gy-3">
                         <div class="col-auto">
-                            <p class="text-white fs-12 fs-md-16">
+                            <p class="text-white fs-14 fs-md-18">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
                                     <g clip-path="url(#clip0_183_158)">
                                         <path d="M10.1389 19.6083C15.7386 19.6083 20.2778 15.219 20.2778 9.80416C20.2778 4.38932 15.7386 0 10.1389 0C4.53919 0 0 4.38932 0 9.80416C0 15.219 4.53919 19.6083 10.1389 19.6083Z" fill="white" />
@@ -27,7 +27,7 @@
                         </div>
 
                         <div class="col-auto">
-                            <p class="text-white fs-12 fs-md-16">
+                            <p class="text-white fs-14 fs-md-18">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
                                     <g clip-path="url(#clip0_183_158)">
                                         <path d="M10.1389 19.6083C15.7386 19.6083 20.2778 15.219 20.2778 9.80416C20.2778 4.38932 15.7386 0 10.1389 0C4.53919 0 0 4.38932 0 9.80416C0 15.219 4.53919 19.6083 10.1389 19.6083Z" fill="white" />
@@ -45,7 +45,7 @@
                         </div>
 
                         <div class="col-auto">
-                            <p class="text-white fs-12 fs-md-16">
+                            <p class="text-white fs-14 fs-md-18">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
                                     <g clip-path="url(#clip0_183_158)">
                                         <path d="M10.1389 19.6083C15.7386 19.6083 20.2778 15.219 20.2778 9.80416C20.2778 4.38932 15.7386 0 10.1389 0C4.53919 0 0 4.38932 0 9.80416C0 15.219 4.53919 19.6083 10.1389 19.6083Z" fill="white" />

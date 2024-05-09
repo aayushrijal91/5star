@@ -131,7 +131,7 @@ get_header();
                     <?php endif; ?>
 
                     <div class="col-12 col-lg-6 col-xxl-5">
-                        <p class="text-uppercase text-primary">About us</p>
+                        <p class="text-uppercase text-primary fs-16 fs-md-18 fs-lg-20">About us</p>
                         <p class="highlight-primary text-dark fs-38 fs-md-48 fw-700 text-capitalize lh-1 py-3"><?= $about['title'] ?></p>
 
                         <?php if (!empty($about['description'])) : ?>
@@ -162,7 +162,7 @@ get_header();
                     </div>
 
                     <?php if (!empty($inclusions['image'])) : ?>
-                        <div class="col-12 col-lg-6 col-xxl-5 order-1 order-lg-2">
+                        <div class="col-12 col-lg-6 order-1 order-lg-2">
                             <div class="rounded-md-10 overflow-hidden h-100">
                                 <img class="w-100 h-100 object-fit-cover" src="<?= $inclusions['image']['url'] ?>" alt="<?= $inclusions['image']['alt'] ?>">
                             </div>
@@ -189,7 +189,7 @@ get_header();
                 <div class="col-xl-10 mt-5 mt-lg-9 mx-auto position-relative">
                     <div class="row gy-5 gx-xl-5">
                         <?php while (have_rows('process')) : the_row(); ?>
-                            <div class="col-6 col-lg-4 <?= $index % 2 ? 'pt-7 pt-md-0': '' ?>">
+                            <div class="col-6 col-lg-4 <?= $index % 2 ? 'pt-7 pt-md-0' : '' ?>">
                                 <div class="processCard <?= ($index == 0) ? "bg-primary text-white" : "bg-white" ?> rounded-20 px-2 px-md-4 py-4 py-md-5 text-center">
                                     <img src="<?= get_sub_field('icon')['url'] ?>" alt="<?= get_sub_field('icon')['url'] ?>">
 
@@ -204,6 +204,12 @@ get_header();
                         endwhile; ?>
                     </div>
                 </div>
+            <?php endif; ?>
+
+            <?php if (!empty(get_field('process_description'))) : ?>
+            <article class="text-center description fs-18 lh-1_67 pt-7 col-lg-10 col-xl-9 mx-auto">
+                <?= get_field('process_description'); ?>
+            </article>
             <?php endif; ?>
         </div>
     </section>

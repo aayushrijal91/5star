@@ -1,15 +1,17 @@
-<?php $serviceCta = get_field('service_cta', 'options'); ?>
+<?php $serviceCta = get_field('service_cta'); ?>
 <section class="serviceCta py-7">
     <div class="container">
         <div class="serviceResults bg-primary rounded-10 overflow-hidden">
             <div class="row gx-0 align-items-center">
                 <div class="col-12 col-xl-8">
                     <div class="rounded-10 overflow-hidden position-relative d-flex justify-content-center align-items-center">
-                        <button class="position-absolute border-0 videoBtn bg-opacity-50 bg-white rounded-circle">
-                            <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20.4165 10.441C21.7498 11.2108 21.7498 13.1353 20.4165 13.9051L3.5515 23.6421C2.21817 24.4119 0.551499 23.4496 0.551499 21.91L0.5515 2.43601C0.5515 0.896409 2.21817 -0.0658428 3.5515 0.703957L20.4165 10.441Z" fill="#0061E0" />
-                            </svg>
-                        </button>
+                        <?php if (!empty($serviceCta['video'])) : ?>
+                            <a href="<?= $serviceCta['video'] ?>" target="_blank" class="position-absolute border-0 videoBtn bg-opacity-50 bg-white rounded-circle d-flex justify-content-center align-items-center">
+                                <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.4165 10.441C21.7498 11.2108 21.7498 13.1353 20.4165 13.9051L3.5515 23.6421C2.21817 24.4119 0.551499 23.4496 0.551499 21.91L0.5515 2.43601C0.5515 0.896409 2.21817 -0.0658428 3.5515 0.703957L20.4165 10.441Z" fill="#0061E0" />
+                                </svg>
+                            </a>
+                        <?php endif; ?>
 
                         <?php if (!empty($serviceCta['video_thumbnail']['url'])) : ?>
                             <img class="w-100" src="<?= $serviceCta['video_thumbnail']['url'] ?>" alt="<?= $serviceCta['video_thumbnail']['alt'] ?>">
@@ -37,10 +39,10 @@
         </div>
 
         <div class="row gy-4 mt-5">
-            <?php if (have_rows('service_cta', 'options')) :
-                while (have_rows('service_cta', 'options')) : the_row();
-                    if (have_rows('cta', 'options')) :
-                        while (have_rows('cta', 'options')) : the_row(); ?>
+            <?php if (have_rows('service_cta')) :
+                while (have_rows('service_cta')) : the_row();
+                    if (have_rows('cta')) :
+                        while (have_rows('cta')) : the_row(); ?>
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="ctaCard">
                                     <div class="d-flex flex-column align-items-center">
