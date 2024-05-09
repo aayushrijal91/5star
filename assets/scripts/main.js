@@ -10,14 +10,17 @@ jQuery(function ($) {
                     $('#slide-down-nav').slideToggle();
                 });
 
-                $('#topbarSlider').slick({
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    variableWidth: true,
-                    arrows: false,
-                    autoplay: true,
-                    infinite: true
-                });
+                // $('#topbarSlider').slick({
+                //     slidesToShow: 1,
+                //     slidesToScroll: 1,
+                //     variableWidth: true,
+                //     arrows: false,
+                //     autoplay: true,
+                //     infinite: true,
+                //     cssEase: 'linear',
+                //     autoplaySpeed: 0,
+                //     speed: 3000
+                // });
 
                 $('#awardsSlider').slick({
                     slidesToShow: 6,

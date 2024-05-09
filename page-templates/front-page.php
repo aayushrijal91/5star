@@ -207,9 +207,9 @@ get_header();
             <?php endif; ?>
 
             <?php if (!empty(get_field('process_description'))) : ?>
-            <article class="text-center description fs-18 lh-1_67 pt-7 col-lg-10 col-xl-9 mx-auto">
-                <?= get_field('process_description'); ?>
-            </article>
+                <article class="text-center description fs-18 lh-1_67 pt-7 col-lg-10 col-xl-9 mx-auto">
+                    <?= get_field('process_description'); ?>
+                </article>
             <?php endif; ?>
         </div>
     </section>
@@ -253,19 +253,16 @@ get_header();
 
     <?php $our_approach = get_field('our_approach');
     if (!empty($our_approach['title'])) : ?>
-        <section class="bg-primary py-6 py-md-8">
+        <section class="our_approach bg-primary py-6 py-md-8">
             <div class="container">
                 <div class="row gx-xl-5 gy-4 gy-md-5">
                     <div class="col-12 col-lg-6 col-xl-7">
                         <div class="position-relative d-flex justify-content-center align-items-center overflow-hidden">
                             <img src="<?= get_template_directory_uri() ?>/assets/images/lib/macbook.png" alt="">
 
-                            <a href="javascript:void(0)" class="bg-transparent border-0 p-0 position-absolute">
-                                <svg width="149" height="150" viewBox="0 0 149 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="74.7505" cy="75.125" r="74.25" fill="white" fill-opacity="0.7" />
-                                    <path d="M71.3091 92.4825L89.5629 77.1253C89.857 76.8778 90.093 76.5707 90.2549 76.2252C90.4167 75.8797 90.5005 75.5039 90.5005 75.1236C90.5005 74.7432 90.4167 74.3674 90.2549 74.0219C90.093 73.6764 89.857 73.3693 89.5629 73.1218L71.3091 57.7646C69.5668 56.299 66.8755 57.5141 66.8755 59.7664V90.4851C66.8755 92.7374 69.5668 93.9525 71.3091 92.4825Z" fill="#0061E0" />
-                                </svg>
-                            </a>
+                            <?php if (!empty($our_approach['video'])) : ?>
+                                <iframe class="heroVideo" src="<?= $our_approach['video'] ?>" title="Granny Flat Builder | Granny Flats Sydney | Anthony Mundine&#39;s Granny Flat Sydney | By 5 Star Granny" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <?php endif; ?>
                         </div>
                     </div>
 
