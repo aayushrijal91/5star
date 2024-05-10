@@ -10,18 +10,6 @@ jQuery(function ($) {
                     $('#slide-down-nav').slideToggle();
                 });
 
-                // $('#topbarSlider').slick({
-                //     slidesToShow: 1,
-                //     slidesToScroll: 1,
-                //     variableWidth: true,
-                //     arrows: false,
-                //     autoplay: true,
-                //     infinite: true,
-                //     cssEase: 'linear',
-                //     autoplaySpeed: 0,
-                //     speed: 3000
-                // });
-
                 $('#awardsSlider').slick({
                     slidesToShow: 6,
                     slidesToScroll: 1,
@@ -245,9 +233,7 @@ jQuery(document).ready(function ($) {
             $(this).find(".accordion-body").slideDown(300);
         }
     });
-});
 
-jQuery(document).ready(function ($) {
     // var URL = "http://localhost:3000/5star/wp-admin/admin-ajax.php";
     var URL = window.location.origin + "/wp-admin/admin-ajax.php";
 
@@ -304,5 +290,19 @@ jQuery(document).ready(function ($) {
                 $('#suburbList').html(response);
             }
         });
+    });
+
+    $(window).on('scroll', () => {
+        if ($(this).scrollTop() >= 600) {
+            $('#return-to-top').fadeIn(300);
+        } else {
+            $('#return-to-top').fadeOut(300);
+        }
+    });
+
+    $('#return-to-top').on('click', () => {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
     });
 });

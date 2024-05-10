@@ -56,6 +56,18 @@ function styles() {
         }))
 }
 
+function slick_assets() {
+    return gulp.src('./node_modules/slick-carousel/slick/ajax-loader.gif')
+        .pipe(sourcemaps.init())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('./styles/'));
+}
+
+function slick_fonts() {
+    return gulp.src('./node_modules/slick-carousel/slick/fonts/**/*')
+        .pipe(gulp.dest('./styles/fonts/'));
+}
+
 function vendor_scripts() {
     return gulp.src(sources.vendor_scripts)
         .pipe(sourcemaps.init())
@@ -90,6 +102,8 @@ exports.watch = gulp.series(
         images,
         custom_scripts,
         vendor_scripts,
+        slick_assets,
+        slick_fonts,
         styles
     ),
     watch
