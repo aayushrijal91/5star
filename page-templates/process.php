@@ -7,14 +7,15 @@ get_header();
 get_template_part('parts/section', 'banner');
 ?>
 
-<main class="processPage">
+<main class="processPage position-relative">
+    <img class="runningVector position-absolute end-0 d-none d-xxl-block" src="<?= get_template_directory_uri() ?>/assets/images/lib/processRunningVector.png" alt="">
     <?php if (have_rows('steps')) :
         $index = 1; ?>
         <?php while (have_rows('steps')) : the_row(); ?>
             <section class="<?= $index % 2 == 1 ? 'bg-tertiary' : 'bg-white' ?> py-5 py-md-9">
                 <div class="container">
-                    <div class="row align-items-center justify-content-between gy-4">
-                        <div class="col-lg-6 <?= $index % 2 == 0 ? 'order-2' : 'order-2 order-md-1' ?>">
+                    <div class="row justify-content-between gy-4">
+                        <div class="col-lg-6 col-xxl-5 <?= $index % 2 == 0 ? 'order-2' : 'order-2 order-md-1' ?>">
                             <img src="<?= get_sub_field('icon')['url'] ?>" alt="<?= get_sub_field('icon')['alt'] ?>">
 
                             <p class="fs-28 fs-md-48 text-primary fw-600 py-3 py-md-4"><?= get_sub_field('title') ?></p>
@@ -41,7 +42,7 @@ get_template_part('parts/section', 'banner');
         endwhile; ?>
     <?php endif; ?>
 
-    <div class="mt-md-8 mb-md-11">
+    <div class="mt-md-8 mb-md-11 position-relative">
         <?= get_template_part('parts/section', 'quoteForm'); ?>
     </div>
 

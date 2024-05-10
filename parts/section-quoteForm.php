@@ -71,19 +71,19 @@
 
                             <div class="row g-3 col-lg-10 mx-auto">
                                 <div class="col-6">
-                                    <a class="btn btn-white text-primary rounded-10" href="javascript:void(0)">Online</a>
+                                    <a class="btn hearAboutUsBtn text-primary rounded-10" href="javascript:void(0)">Online</a>
                                 </div>
 
                                 <div class="col-6">
-                                    <a class="btn btn-white text-primary rounded-10" href="javascript:void(0)">Sign Board</a>
+                                    <a class="btn hearAboutUsBtn text-primary rounded-10" href="javascript:void(0)">Sign Board</a>
                                 </div>
 
                                 <div class="col-6">
-                                    <a class="btn btn-white text-primary rounded-10" href="javascript:void(0)">Word of Mouth</a>
+                                    <a class="btn hearAboutUsBtn text-primary rounded-10" href="javascript:void(0)">Word of Mouth</a>
                                 </div>
 
                                 <div class="col-6">
-                                    <a class="btn btn-white text-primary rounded-10" href="javascript:void(0)">Other</a>
+                                    <a class="btn hearAboutUsBtn text-primary rounded-10" href="javascript:void(0)">Other</a>
                                 </div>
                             </div>
                         </div>
@@ -101,19 +101,19 @@
 
                             <div class="row g-3 col-lg-10 mx-auto">
                                 <div class="col-6">
-                                    <a class="btn btn-white text-primary rounded-10" href="javascript:void(0)">Online</a>
+                                    <a class="btn hearAboutUsBtn text-primary rounded-10" href="javascript:void(0)">Online</a>
                                 </div>
 
                                 <div class="col-6">
-                                    <a class="btn btn-white text-primary rounded-10" href="javascript:void(0)">Sign Board</a>
+                                    <a class="btn hearAboutUsBtn text-primary rounded-10" href="javascript:void(0)">Sign Board</a>
                                 </div>
 
                                 <div class="col-6">
-                                    <a class="btn btn-white text-primary rounded-10" href="javascript:void(0)">Word of Mouth</a>
+                                    <a class="btn hearAboutUsBtn text-primary rounded-10" href="javascript:void(0)">Word of Mouth</a>
                                 </div>
 
                                 <div class="col-6">
-                                    <a class="btn btn-white text-primary rounded-10" href="javascript:void(0)">Other</a>
+                                    <a class="btn hearAboutUsBtn text-primary rounded-10" href="javascript:void(0)">Other</a>
                                 </div>
                             </div>
                         </div>

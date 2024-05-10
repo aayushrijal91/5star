@@ -8,9 +8,7 @@ header {
         display: inline-block;
         white-space: nowrap;
         padding-right: 100px;
-        /* Space between slides */
         animation: marquee 15s linear infinite;
-        /* Adjust duration as needed */
     }
 
     @keyframes marquee {
@@ -25,7 +23,7 @@ header {
 
     nav {
         #menu-primary-menu {
-            .current_page_item a {
+            .current_page_item>a {
                 color: $primary !important;
                 font-weight: 700;
                 text-decoration: underline;
@@ -89,6 +87,10 @@ section.banner {
 }
 
 section.quoteForm {
+    .hearAboutUsBtn {
+        background: rgba(255, 255, 255, 0.7);
+    }
+
     input.form-control {
         height: 67px;
 

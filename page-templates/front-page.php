@@ -70,9 +70,9 @@ get_header();
 
     <section class="awards py-4 border-bottom border-light-grey">
         <div class="container">
-            <div class="row align-items-center gy-5">
-                <div class="col-12 col-md-3">
-                    <p class="fs-18 fw-600 text-primary text-center text-md-start">We're award winning builders</p>
+            <div class="row align-items-center gy-5 justify-content-xl-end">
+                <div class="col-12 col-md-3 col-xl-auto">
+                    <p class="fs-18 fw-700 text-primary text-center text-md-start">We're award winning builders</p>
                 </div>
 
                 <div class="col-12 col-md-9">
@@ -96,7 +96,7 @@ get_header();
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-2 d-none d-md-block">
-                    <p class="fs-18 fw-600 text-primary">Our Partners</p>
+                    <p class="fs-18 fs-lg-25 fw-700 text-primary">Our Partners</p>
                 </div>
 
                 <div class="col-12 col-md-10">
