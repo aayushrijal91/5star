@@ -411,7 +411,7 @@ get_template_part('parts/section', 'banner');
                     <?php while (have_rows('services')) : the_row(); ?>
                         <div class="<?= $serviceCount == 0 ? 'col-12' : 'col-xl-6' ?>">
                             <div class="serviceCard rounded-11 position-relative overflow-hidden">
-                                <img class="h-100 w-100 position-absolute top-0" src="<?= get_sub_field('image')['url'] ?>" alt="<?= get_sub_field('image')['alt'] ?>">
+                                <img class="h-100 w-100 object-fit-cover position-absolute top-0" src="<?= get_sub_field('image')['url'] ?>" alt="<?= get_sub_field('image')['alt'] ?>">
 
                                 <div class="overlay position-relative h-100 p-5 text-white d-flex align-items-end">
                                     <div class="<?= $serviceCount == 0 ? 'col-xl-9' : '' ?>">

@@ -117,6 +117,17 @@ jQuery(function ($) {
                     ]
                 });
 
+                function updateCurrentSlide() {
+                    $('#current-slide').text($('#grannyFlatFaqSlider').slick('slickCurrentSlide') + 1);
+                }
+
+                // Initial update
+                updateCurrentSlide();
+
+                $('#grannyFlatFaqSlider').on('afterChange', function (event, slick, currentSlide) {
+                    updateCurrentSlide();
+                });
+
                 $('.grannyFlatGallery').slick({
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -140,6 +151,13 @@ jQuery(function ($) {
                     nextArrow: $("#grannyFlatDesignsSliderNext"),
                 });
 
+                $('#grannyFlatDesignGallery').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    variableWidth: true,
+                    arrows: false,
+                    autoplay: true,
+                })
                 $('.gallerySlider').each(function (index, element) {
                     $(element).slick({
                         slidesToShow: 1,
@@ -211,9 +229,6 @@ jQuery(function ($) {
                 });
             }, // end misc
         }, // end ui
-        //utils: {
-
-        //}, // end utils
     };
     Engine.ui.misc();
     //Engine.utils.sliders();
@@ -221,12 +236,8 @@ jQuery(function ($) {
 
 jQuery(document).ready(function ($) {
     $(document).on('click', '.accordion-card', function () {
-        $(".accordion-card").removeClass("active");
-        $(this).addClass('active');
+        $(this).toggleClass('active');
 
-        if ($('.accordion-body').is(':visible')) {
-            $(".accordion-body").slideUp(300);
-        }
         if ($(this).find(".accordion-body").is(':visible')) {
             $(this).find(".accordion-body").slideUp(300);
         } else {
@@ -234,8 +245,8 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    // var URL = "http://localhost:3000/5star/wp-admin/admin-ajax.php";
-    var URL = window.location.origin + "/wp-admin/admin-ajax.php";
+    var URL = "http://localhost:3000/5star/wp-admin/admin-ajax.php";
+    // var URL = window.location.origin + "/wp-admin/admin-ajax.php";
 
     $('button.faqTypeNavBtn').on('click', function (e) {
         e.preventDefault();

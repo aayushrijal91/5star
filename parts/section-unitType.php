@@ -106,7 +106,7 @@ $countList = 0;
                                         <p class="text-uppercase fw-500 fs-12 fs-md-16"><?= $list[$key]; ?> Granny Flat</p>
 
                                         <p class="fs-20 fs-lg-30 fw-700 py-2"><?= get_the_title() ?></p>
-                                        <p class="fs-14 fs-lg-20 fw-700 opacity-50 text-black">from $<?= !empty(get_field('price')) ? number_format(get_field('price')) : '0' ?></p>
+                                        <!-- <p class="fs-14 fs-lg-20 fw-700 opacity-50 text-black">from $<?= !empty(get_field('price')) ? number_format(get_field('price')) : '0' ?></p> -->
 
                                         <hr>
 

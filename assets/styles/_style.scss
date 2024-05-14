@@ -521,6 +521,106 @@ main.projectPage {
     }
 }
 
+main.grannyFlatDesignsPage,
+main.grannyFlatConstructionPage,
+main.grannyFlatApprovalsPage {
+    section.list {
+        .projectGalleryNavSlider {
+            .slick-slide {
+                border-radius: 7px;
+                overflow: hidden;
+                margin: 0 9px;
+                height: 88px;
+                opacity: 0.5;
+
+                @include media-breakpoint-down(sm) {
+                    margin: 0 2px;
+                }
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+
+                &.slick-current {
+                    opacity: 1;
+                }
+
+            }
+        }
+
+        .projectGalleryImageSlider {
+            .slick-track {
+                display: flex;
+                height: 573px;
+
+                @include media-breakpoint-down(sm) {
+                    height: 250px;
+                }
+            }
+
+            .slick-slide {
+                height: inherit;
+                border-radius: 11px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+    }
+
+    section.introduction {
+        .heroImage {
+            height: 808px;
+            border-radius: 20px;
+
+            @include media-breakpoint-down(sm) {
+                border-radius: 10px 10px 0 0;
+                height: 342px;
+            }
+        }
+
+        .content {
+            border-radius: 0 20px 20px 0;
+
+            @include media-breakpoint-down(sm) {
+                border-radius: 0 0 10px 10px;
+            }
+        }
+    }
+
+    section.grannyFlatDesignGallery {
+        .slick-track {
+            display: flex;
+        }
+
+        .slick-slide {
+            height: 515px;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .serviceCard {
+        height: 450px;
+
+        .overlay {
+            background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+        }
+    }
+}
+
 main.testimonialsPage {
     section.testimonials {
 
@@ -658,6 +758,9 @@ main.blogsPage {
 
 main.grannyFlatsPage,
 main.projectPage,
+main.grannyFlatDesignsPage,
+main.grannyFlatConstructionPage,
+main.grannyFlatApprovalsPage,
 main.suburbPage {
     section.faq {
         #grannyFlatFaqSlider {

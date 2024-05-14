@@ -1,7 +1,7 @@
 <?php
 /*
-* Template Name: Project
-* The project Page
+* Template Name: Granny Flat Construction
+* The Granny Flat Construction Page
 */
 get_header();
 get_template_part('parts/section', 'banner');
@@ -13,7 +13,7 @@ if ($post) {
 }
 ?>
 
-<main class="projectPage">
+<main class="grannyFlatConstructionPage">
     <section class="list">
         <div class="container px-0 px-md-3">
             <?php
@@ -66,10 +66,10 @@ if ($post) {
                             </div>
 
                             <div class="position-relative mt-2 overflow-hidden rounded-11">
-                                <div class="position-absolute end-0 top-0 px-4 z-100 bg-white bg-opacity-50">
+                                <div class="position-absolute end-0 top-0 px-3 px-md-4 z-100 bg-white bg-opacity-50">
                                     <ul class="ps-0">
                                         <li>
-                                            <button data-filter="photos" type="button" class="projectfilter w-100 h-100 border-0 bg-transparent text-start py-4 fw-700">
+                                            <button data-filter="photos" type="button" class="projectfilter w-100 h-100 border-0 bg-transparent text-start py-1 py-md-4 fw-700">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="none">
                                                     <path d="M6.896 7.66459C6.896 8.86041 7.86895 9.83336 9.06477 9.83336C10.2608 9.83336 11.2338 8.86041 11.2338 7.66459C11.2338 6.46856 10.2608 5.49561 9.06477 5.49561C7.86895 5.49561 6.896 6.46856 6.896 7.66459ZM10.1859 7.66459C10.1859 8.28266 9.68305 8.78551 9.06477 8.78551C8.4467 8.78551 7.94385 8.28266 7.94385 7.66459C7.94385 7.04631 8.4467 6.54346 9.06477 6.54346C9.68305 6.54346 10.1859 7.04631 10.1859 7.66459Z" fill="currentColor" />
                                                     <path d="M18.2002 1.96094C18.3385 1.96094 18.4732 1.90487 18.5706 1.80745C18.668 1.71003 18.7241 1.57475 18.7241 1.43701C18.7241 1.29866 18.6683 1.164 18.5706 1.06658C18.4732 0.968549 18.3385 0.913086 18.2002 0.913086C18.0625 0.913086 17.9274 0.968549 17.83 1.06658C17.7323 1.164 17.6763 1.29866 17.6763 1.43701C17.6763 1.57475 17.7323 1.71003 17.83 1.80745C17.9274 1.90487 18.0625 1.96094 18.2002 1.96094Z" fill="currentColor" />
@@ -80,7 +80,7 @@ if ($post) {
                                             </button>
                                         </li>
                                         <li>
-                                            <button data-filter="floorplan" type="button" class="projectfilter w-100 h-100 border-0 bg-transparent text-start py-4 fw-700">
+                                            <button data-filter="floorplan" type="button" class="projectfilter w-100 h-100 border-0 bg-transparent text-start py-1 py-md-4 fw-700">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
                                                     <path d="M25.0242 0.914966C19.0975 0.901706 6.98086 0.963599 1.00331 0.944823C0.797498 0.943613 0.62963 1.10945 0.62842 1.31531V1.31976C0.633936 8.30593 0.62842 18.4617 0.62842 25.3185C0.627791 25.5256 0.795175 25.694 1.00224 25.6945H17.6112C17.8182 25.6952 17.9866 25.5278 17.9872 25.3207C17.9872 25.32 17.9872 25.3192 17.9872 25.3185V19.29H25.0243C25.2319 19.29 25.4003 19.1217 25.4003 18.914V1.29208C25.4009 1.08443 25.233 0.915546 25.0253 0.914966C25.0249 0.914966 25.0245 0.914966 25.0242 0.914966ZM24.6515 18.5369H17.9916V17.0992C17.9916 16.8922 17.8237 16.7243 17.6166 16.7243C17.4096 16.7243 17.2417 16.8922 17.2417 17.0992V24.9348H6.19567V23.4971C6.19552 23.2894 6.02703 23.1212 5.81938 23.1213C5.61193 23.1214 5.44382 23.2896 5.44362 23.4971V24.9348H1.3793V19.29H5.44362V20.7023C5.44377 20.91 5.61227 21.0782 5.81991 21.0781C6.02737 21.0779 6.19548 20.9098 6.19567 20.7023V17.0959C6.19552 16.8882 6.02703 16.72 5.81938 16.7201C5.61193 16.7203 5.44382 16.8884 5.44362 17.0959V18.5336H1.3793V12.8889H5.44362V14.3366C5.44377 14.5442 5.61227 14.7125 5.81991 14.7123C6.02737 14.7122 6.19548 14.544 6.19567 14.3366V12.8889H8.65418C8.86154 12.8776 9.0205 12.7004 9.00927 12.4931C8.99887 12.3014 8.84581 12.1484 8.65418 12.138H1.3793V1.69464H13.8266V12.138H11.3936C11.1862 12.1492 11.0272 12.3265 11.0385 12.5338C11.0489 12.7254 11.2019 12.8785 11.3936 12.8889H17.2428V14.3266C17.2426 14.5337 17.4103 14.7017 17.6173 14.702C17.8243 14.7022 17.9924 14.5345 17.9926 14.3275C17.9926 14.3272 17.9926 14.3269 17.9926 14.3267V12.889H19.9645C20.1719 12.8777 20.3309 12.7005 20.3196 12.4931C20.3092 12.3015 20.1562 12.1484 19.9645 12.138H14.5787V1.66812H24.6515V12.138H22.6442C22.4369 12.1267 22.2596 12.2858 22.2484 12.4931C22.2371 12.7005 22.3961 12.8777 22.6035 12.889C22.6171 12.8897 22.6307 12.8897 22.6443 12.889H24.6515L24.6515 18.5369Z" fill="currentColor" />
                                                 </svg>
@@ -88,7 +88,7 @@ if ($post) {
                                             </button>
                                         </li>
                                         <li>
-                                            <button data-filter="video" type="button" class="projectfilter w-100 h-100 border-0 bg-transparent text-start py-4 fw-700">
+                                            <button data-filter="video" type="button" class="projectfilter w-100 h-100 border-0 bg-transparent text-start py-1 py-md-4 fw-700">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="21" viewBox="0 0 30 21" fill="none">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M1.21944 12.3608C1.52944 12.3608 1.78068 12.1095 1.78068 11.7995V3.06418C1.78068 2.48628 2.25093 2.01603 2.82883 2.01603H27.2006C27.7785 2.01603 28.2487 2.48628 28.2487 3.06418V4.78166C28.2487 5.09143 28.5 5.34289 28.8099 5.34289C29.1199 5.34289 29.3712 5.09143 29.3712 4.78166V3.06418C29.3712 1.86739 28.3974 0.893555 27.2006 0.893555H2.82883C1.63204 0.893555 0.658203 1.86739 0.658203 3.06418V11.7995C0.658203 12.1095 0.909444 12.3608 1.21944 12.3608Z" fill="currentColor" />
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M28.8099 8.79883C28.5 8.79883 28.2487 9.05029 28.2487 9.36007V18.0956C28.2487 18.6735 27.7785 19.1438 27.2006 19.1438H2.82883C2.25093 19.1438 1.78068 18.6735 1.78068 18.0956V16.3782C1.78068 16.0682 1.52944 15.8169 1.21944 15.8169C0.909444 15.8169 0.658203 16.0682 0.658203 16.3782V18.0956C0.658203 19.2924 1.63204 20.2663 2.82883 20.2663H27.2006C28.3974 20.2663 29.3712 19.2924 29.3712 18.0956V9.36007C29.3712 9.05029 29.1199 8.79883 28.8099 8.79883Z" fill="currentColor" />
@@ -100,7 +100,7 @@ if ($post) {
                                             </button>
                                         </li>
                                         <li>
-                                            <button data-filter="all" type="button" class="projectfilter w-100 h-100 border-0 bg-transparent text-start py-4 fw-700 text-center">
+                                            <button data-filter="all" type="button" class="projectfilter w-100 h-100 border-0 bg-transparent text-start py-1 py-md-4 fw-700 text-center">
                                                 All
                                             </button>
                                         </li>
@@ -266,86 +266,17 @@ if ($post) {
         </div>
     </section>
 
-    <?php $introduction = get_field('introduction'); ?>
-    <?php if (!empty($introduction['title'])) : ?>
-        <section class="introduction py-5 py-md-9 mt-md-8">
+    <?php if (have_rows('why_us')) : ?>
+        <section class="why_us bg-dark-grey py-6 py-md-9 mt-5 mt-md-8 mt-xl-10">
             <div class="container">
-                <div class="row align-items-center gx-0">
-                    <?php if (!empty($introduction['image']['url'])) : ?>
-                        <div class="col-lg-6">
-                            <div class="heroImage overflow-hidden">
-                                <img class="h-100 w-100 object-fit-cover" src="<?= $introduction['image']['url'] ?>" alt="<?= $introduction['image']['alt'] ?>">
-                            </div>
-                        </div>
-                    <?php endif; ?>
-
-                    <div class="col-lg-6">
-                        <div class="content bg-primary py-4 py-md-6 py-xl-9 px-3 px-xl-8 text-white">
-                            <p class="fs-30 fs-md-48 font-poppins fw-600 lh-1"><?= $introduction['title'] ?></p>
-
-                            <?php if (!empty($introduction['description'])) : ?>
-                                <article class="description fs-18 lh-1_67 pt-4 pt-md-5">
-                                    <?= $introduction['description'] ?>
-                                </article>
-                            <?php endif; ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <?php endif; ?>
-
-    <?php if (have_rows('services') || have_rows('why_us')) : ?>
-        <section class="services bg-tertiary py-6 py-md-9">
-            <div class="container">
-                <?php if (have_rows('services')) : ?>
-                    <div class="row gy-4 mb-5 d-md-none">
-                        <?php while (have_rows('services')) : the_row(); ?>
-                            <div class="col-12">
-                                <img class="w-100 rounded-6" src="<?= get_sub_field('image')['url'] ?>" alt="<?= get_sub_field('image')['alt'] ?>">
-
-                                <p class="fs-24 fw-600 font-poppins py-3"><?= get_sub_field('title') ?></p>
-
-                                <article class="fs-14 fw-500 lh-1_67">
-                                    <?= get_sub_field('description') ?>
-                                </article>
-                            </div>
-                        <?php endwhile; ?>
-                    </div>
-                <?php endif; ?>
-
-                <?php if (have_rows('services')) :
-                    $counter = 0; ?>
-                    <div class="row g-4 mb-10 d-none d-md-flex">
-                        <?php while (have_rows('services')) : the_row(); ?>
-                            <div class="<?= $counter == 0 ? 'col-12' : 'col-md-6' ?>">
-                                <div class="serviceCard rounded-11 position-relative overflow-hidden">
-                                    <img class="h-100 w-100 position-absolute object-fit-cover top-0" src="<?= get_sub_field('image')['url'] ?>" alt="<?= get_sub_field('image')['alt'] ?>">
-
-                                    <div class="overlay position-relative h-100 p-5 text-white d-flex align-items-end">
-                                        <div class="<?= $counter == 0 ? 'col-xl-9' : '' ?>">
-                                            <p class="fs-30 fw-600 font-poppins"><?= get_sub_field('title') ?></p>
-                                            <article class="fs-18 fw-500 pt-3 lh-1_67">
-                                                <?= get_sub_field('description') ?>
-                                            </article>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php
-                            $counter++;
-                        endwhile; ?>
-                    </div>
-                <?php endif; ?>
-
                 <?php if (have_rows('why_us')) :
                     $counter = 0;
                 ?>
                     <div class="bg-dark-grey rounded-17 overflow-hidden">
                         <?php while (have_rows('why_us')) : the_row(); ?>
                             <div class="row g-0">
-                                <div class="col-lg-6 d-flex align-items-center <?= $counter % 2 ? 'order-2' : 'order-2 order-md-1' ?>">
-                                    <div class="text-white px-3 py-5 py-xl-8 col-lg-9 mx-auto">
+                                <div class="col-lg-6 d-flex align-items-center <?= $counter % 2 ? 'order-1' : 'order-1 order-lg-2' ?>">
+                                    <div class="text-white px-3 py-5 py-xl-8 col-xl-10 <?= $counter % 2 ? 'me-auto' : 'ms-auto' ?>">
                                         <p class="fs-30 fs-md-48 fw-600 lh-1"><?= get_sub_field('title'); ?></p>
                                         <article class="fs-18 fw-500 lh-1_67 mt-5 description">
                                             <?= get_sub_field('description'); ?>
@@ -353,9 +284,9 @@ if ($post) {
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6 <?= $counter % 2 ? 'order-1' : 'order-1 order-md-2' ?>">
-                                    <div class="position-relative overflow-hidden h-100">
-                                        <img class="w-100 h-100 position-absolute top-0 left-0 object-cover-fit" src="<?= get_sub_field('image')['url'] ?>" alt="<?= get_sub_field('image')['alt'] ?>">
+                                <div class="col-lg-6 <?= $counter % 2 ? 'order-2' : 'order-2 order-lg-1' ?>">
+                                    <div class="position-relative overflow-hidden h-100" style="min-height: 400px">
+                                        <img class="w-100 h-100 position-absolute top-0 left-0 object-fit-cover" src="<?= get_sub_field('image')['url'] ?>" alt="<?= get_sub_field('image')['alt'] ?>">
                                     </div>
                                 </div>
                             </div>
@@ -365,6 +296,41 @@ if ($post) {
                     </div>
                 <?php endif; ?>
             </div>
+        </section>
+    <?php endif; ?>
+    <?php if (have_rows('tailoring')) :
+        $index = 1;
+    ?>
+        <section class="tailoring bg-dark-grey">
+            <div class="container">
+                <?php while (have_rows('tailoring')) : the_row(); ?>
+                    <div class="row">
+                        <div class="col-5 col-md-6">
+                            <p class="fs-18 fs-md-30 text-white text-capitalize fw-500"><?= get_sub_field('title') ?></p>
+                        </div>
+                        <div class="col-7 col-md-6">
+                            <article class="description fs-18 text-grey lh-1_67 fw-500">
+                                <?= get_sub_field('description') ?>
+                            </article>
+                        </div>
+                    </div>
+                    <?php if ($index != count(get_field('tailoring'))) : ?>
+                        <hr class="border-grey mb-5">
+                    <?php
+                        $index++;
+                    endif; ?>
+                <?php endwhile; ?>
+            </div>
+        </section>
+    <?php endif; ?>
+
+    <?php if (!empty(get_field('gallery'))) : ?>
+        <section class="grannyFlatDesignGallery bg-dark-grey pt-7" id="grannyFlatDesignGallery">
+            <?php foreach (get_field('gallery') as $gallery) : ?>
+                <div>
+                    <img src="<?= $gallery['url'] ?>" alt="">
+                </div>
+            <?php endforeach; ?>
         </section>
     <?php endif; ?>
 
@@ -409,12 +375,16 @@ if ($post) {
                     endwhile;
                 endif; ?>
 
-                <div class="row align-items-center justify-content-between justify-content-md-end gx-2">
+                <div class="row align-items-center justify-content-between gx-2">
                     <?php if (!empty($faqs['link'])) : ?>
                         <div class="col-auto d-md-none">
                             <a href="<?= $faqs['link'] ?>" class="btn btn-black rounded-10 text-white px-4">View All FAQ's</a>
                         </div>
                     <?php endif; ?>
+
+                    <div class="col-auto d-none d-md-block">
+                        <span id="current-slide">1</span> of <?= get_field('faqs')['faqs_list'] ? count(get_field('faqs')['faqs_list']) : 0; ?>
+                    </div>
 
                     <?php if (have_rows('faqs')) :
                         while (have_rows('faqs')) : the_row();
