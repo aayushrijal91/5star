@@ -439,7 +439,7 @@ get_template_part('parts/section', 'banner');
                             <div class="col-lg-6 d-flex align-items-center <?= $counter % 2 ? 'order-2' : 'order-2 order-lg-1' ?>">
                                 <div class="text-white px-3 py-5 col-xl-9 mx-auto">
                                     <p class="fs-30 fs-md-38 fs-lg-48 fw-600 lh-1"><?= get_sub_field('title'); ?></p>
-                                    <article class="fs-md-16 fs-lg-18 fw-500 lh-1_67 mt-5 description">
+                                    <article class="fs-md-16 fs-lg-18 fw-500 lh-1_67 mt-4 description">
                                         <?= get_sub_field('description'); ?>
                                     </article>
                                 </div>
@@ -502,12 +502,16 @@ get_template_part('parts/section', 'banner');
 
             <hr class="border-black border-1 opacity-100" />
 
-            <div class="row align-items-center justify-content-between justify-content-md-end gx-2">
+            <div class="row align-items-center justify-content-between gx-2">
                 <?php if (!empty($faqs['link'])) : ?>
                     <div class="col-auto d-md-none">
                         <a href="<?= $faqs['link'] ?>" class="btn btn-black rounded-10 text-white px-4">View All FAQ's</a>
                     </div>
                 <?php endif; ?>
+
+                <div class="col-auto d-none d-md-block">
+                    <span id="current-slide">1</span> of <?= get_field('faqs')['faqs_list'] ? count(get_field('faqs')['faqs_list']) : 0; ?>
+                </div>
 
                 <?php if (have_rows('faqs')) :
                     while (have_rows('faqs')) : the_row();

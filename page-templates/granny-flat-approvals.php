@@ -383,7 +383,7 @@ if ($post) {
                                 <div class="col-lg-6 d-flex align-items-center <?= $counter % 2 ? 'order-2' : 'order-2 order-lg-1' ?>">
                                     <div class="text-white px-3 py-5 py-xl-8 col-xl-10 <?= $counter % 2 ? 'ms-auto' : 'me-auto' ?>">
                                         <p class="fs-30 fs-md-48 fw-600 lh-1"><?= get_sub_field('title'); ?></p>
-                                        <article class="fs-18 fw-500 lh-1_67 mt-5 description">
+                                        <article class="fs-18 fw-500 lh-1_67 mt-4 description">
                                             <?= get_sub_field('description'); ?>
                                         </article>
                                     </div>

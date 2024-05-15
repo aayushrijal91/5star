@@ -13,6 +13,7 @@ if ($post) {
 }
 ?>
 
+
 <main class="projectPage">
     <section class="list">
         <div class="container px-0 px-md-3">
@@ -314,16 +315,29 @@ if ($post) {
                     </div>
                 <?php endif; ?>
 
-                <?php if (have_rows('services')) :
+                <?php
+                if (have_rows('services')) :
+                    function checkPattern($i)
+                    {
+                        $remainder = $i % 6;
+
+                        if ($remainder == 1 || $remainder == 4 || $remainder == 5) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    }
+
                     $counter = 0; ?>
                     <div class="row g-4 mb-10 d-none d-md-flex">
-                        <?php while (have_rows('services')) : the_row(); ?>
-                            <div class="<?= $counter == 0 ? 'col-12' : 'col-md-6' ?>">
+                        <?php while (have_rows('services')) : the_row();
+                        ?>
+                            <div class="<?= $counter == 0 ? 'col-12' : (checkPattern($counter) ? 'col-md-5' : 'col-md-7') ?>">
                                 <div class="serviceCard rounded-11 position-relative overflow-hidden">
                                     <img class="h-100 w-100 position-absolute object-fit-cover top-0" src="<?= get_sub_field('image')['url'] ?>" alt="<?= get_sub_field('image')['alt'] ?>">
 
                                     <div class="overlay position-relative h-100 p-5 text-white d-flex align-items-end">
-                                        <div class="<?= $counter == 0 ? 'col-xl-9' : '' ?>">
+                                        <div class="<?= $counter == 0 ? 'col-xl-10' : '' ?>">
                                             <p class="fs-30 fw-600 font-poppins"><?= get_sub_field('title') ?></p>
                                             <article class="fs-18 fw-500 pt-3 lh-1_67">
                                                 <?= get_sub_field('description') ?>
@@ -347,14 +361,14 @@ if ($post) {
                                 <div class="col-lg-6 d-flex align-items-center <?= $counter % 2 ? 'order-2' : 'order-2 order-md-1' ?>">
                                     <div class="text-white px-3 py-5 py-xl-8 col-lg-9 mx-auto">
                                         <p class="fs-30 fs-md-48 fw-600 lh-1"><?= get_sub_field('title'); ?></p>
-                                        <article class="fs-18 fw-500 lh-1_67 mt-5 description">
+                                        <article class="fs-18 fw-500 lh-1_67 mt-4 description">
                                             <?= get_sub_field('description'); ?>
                                         </article>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6 <?= $counter % 2 ? 'order-1' : 'order-1 order-md-2' ?>">
-                                    <div class="position-relative overflow-hidden h-100">
+                                    <div class="position-relative overflow-hidden h-100" style="min-height: 400px">
                                         <img class="w-100 h-100 position-absolute top-0 left-0 object-cover-fit" src="<?= get_sub_field('image')['url'] ?>" alt="<?= get_sub_field('image')['alt'] ?>">
                                     </div>
                                 </div>
@@ -409,12 +423,16 @@ if ($post) {
                     endwhile;
                 endif; ?>
 
-                <div class="row align-items-center justify-content-between justify-content-md-end gx-2">
+                <div class="row align-items-center justify-content-between gx-2">
                     <?php if (!empty($faqs['link'])) : ?>
                         <div class="col-auto d-md-none">
                             <a href="<?= $faqs['link'] ?>" class="btn btn-black rounded-10 text-white px-4">View All FAQ's</a>
                         </div>
                     <?php endif; ?>
+
+                    <div class="col-auto d-none d-md-block">
+                        <span id="current-slide">1</span> of <?= get_field('faqs')['faqs_list'] ? count(get_field('faqs')['faqs_list']) : 0; ?>
+                    </div>
 
                     <?php if (have_rows('faqs')) :
                         while (have_rows('faqs')) : the_row();
