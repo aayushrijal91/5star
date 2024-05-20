@@ -123,6 +123,11 @@ main.homepage {
                         font-size: 34px;
                     }
                 }
+
+                .content {
+                    height: 300px;
+                    overflow-y: scroll;
+                }
             }
         }
     }
@@ -491,9 +496,15 @@ main.projectPage {
     section.introduction {
         background: linear-gradient($white 0 40%, $dark-grey 40% 100%);
 
+        // @include media-breakpoint-down(sm) {
+        //     padding-bottom: 50px;
+        // }
+
         .heroImage {
-            height: 808px;
+            height: 670px;
             border-radius: 20px;
+            position: relative;
+            z-index: 10;
 
             @include media-breakpoint-down(sm) {
                 border-radius: 10px 10px 0 0;
@@ -502,11 +513,32 @@ main.projectPage {
         }
 
         .content {
-            border-radius: 0 20px 20px 0;
+            .background {
+                border-radius: 20px;
+                background: $primary;
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 115%;
 
-            @include media-breakpoint-down(sm) {
+                @include media-breakpoint-down(lg) {
+                    position: relative;
+                }
+            }
+            
+            @include media-breakpoint-down(lg) {
+                background: $primary;
                 border-radius: 0 0 10px 10px;
             }
+
+        }
+
+        &.top {
+            .content {
+                margin-top: -48px;
+            }
+
         }
     }
 

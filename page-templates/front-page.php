@@ -340,7 +340,7 @@ get_header();
                                     </svg>
                                 </div>
 
-                                <article class="fs-14 fs-md-20 lh-1_67 py-4">
+                                <article class="fs-14 fs-md-20 lh-1_67 my-4 content">
                                     <?= get_sub_field('description') ?>
                                 </article>
 
