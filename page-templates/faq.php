@@ -94,6 +94,14 @@ get_template_part('parts/section', 'banner');
                 </div>
             </div>
 
+            <p id="loadingFaq" class="text-center pb-5">
+                <svg width="30px" height="30px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" xmlns="http://www.w3.org/2000/svg" style="background: none;">
+                    <circle cx="50" cy="50" fill="none" stroke="#0061E0" stroke-width="10" r="35" stroke-dasharray="164.93361431346415 56.97787143782138">
+                        <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" keyTimes="0;1" values="0 50 50;360 50 50"></animateTransform>
+                    </circle>
+                </svg>
+            </p>
+
             <div class="accordion-container">
                 <?php
                 $all_faqs_query = new WP_Query(array(
@@ -109,7 +117,6 @@ get_template_part('parts/section', 'banner');
                         ),
                     ),
                 )); ?>
-
                 <div id="faq-results">
                     <?php if ($all_faqs_query->have_posts()) {
                         $index = 1; ?>

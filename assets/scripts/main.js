@@ -267,8 +267,13 @@ jQuery(document).ready(function ($) {
                 action: 'filter_faqs',
                 category: selectedCategory
             },
+            beforeSend: function () {
+                // Add the 'active' class to #loadingFaq before the request is sent
+                $('#loadingFaq').addClass('active');
+            },
             success: function (response) {
                 $('#faq-results').html(response);
+                $('#loadingFaq').removeClass('active');
             }
         });
     });

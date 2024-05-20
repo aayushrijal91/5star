@@ -219,6 +219,14 @@ main.faqPage {
     }
 
     section.faqs {
+        #loadingFaq {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+
         .faqSearch {
             outline: none;
 
