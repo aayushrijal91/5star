@@ -496,10 +496,6 @@ main.projectPage {
     section.introduction {
         background: linear-gradient($white 0 40%, $dark-grey 40% 100%);
 
-        // @include media-breakpoint-down(sm) {
-        //     padding-bottom: 50px;
-        // }
-
         .heroImage {
             height: 670px;
             border-radius: 20px;
@@ -526,17 +522,10 @@ main.projectPage {
                     position: relative;
                 }
             }
-            
+
             @include media-breakpoint-down(lg) {
                 background: $primary;
                 border-radius: 0 0 10px 10px;
-            }
-
-        }
-
-        &.top {
-            .content {
-                margin-top: -48px;
             }
 
         }
@@ -549,6 +538,30 @@ main.projectPage {
             .overlay {
                 background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
             }
+        }
+    }
+
+    section.about {
+        .content {
+            .background {
+                border-radius: 20px;
+                background: $dark-grey;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 115%;
+
+                @include media-breakpoint-down(lg) {
+                    position: relative;
+                }
+            }
+
+            @include media-breakpoint-down(lg) {
+                background: $dark-grey;
+                border-radius: 0 0 10px 10px;
+            }
+
         }
     }
 }

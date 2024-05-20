@@ -87,8 +87,32 @@ section.banner {
 }
 
 section.quoteForm {
-    .hearAboutUsBtn {
-        background: rgba(255, 255, 255, 0.7);
+
+    #hearAboutUsForm {
+        input[type=radio] {
+            display: none;
+        }
+
+        label {
+            background: rgba(255, 255, 255, 0.7);
+            color: $primary;
+            border-radius: 10px;
+            height: 61px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.2s all;
+            cursor: pointer;
+
+            &:hover {
+                background: rgba(255, 255, 255, 1);
+            }
+        }
+
+        input[type=radio]:checked+label {
+            background: $primary;
+            color: $white;
+        }
     }
 
     input.form-control {

@@ -69,21 +69,25 @@
                         <div class="position-relative text-center p-4">
                             <p class="text-white fs-18 pb-4">How did you hear about us?</p>
 
-                            <div class="row g-3 col-lg-10 mx-auto">
+                            <div id="hearAboutUsForm" class="row g-3 col-lg-10 mx-auto">
                                 <div class="col-6">
-                                    <a class="btn hearAboutUsBtn text-primary rounded-10" href="javascript:void(0)">Online</a>
+                                    <input type="radio" id="hearAboutUs_online" name="hearAboutUs" value="Online" checked>
+                                    <label for="hearAboutUs_online">Online</label>
                                 </div>
 
                                 <div class="col-6">
-                                    <a class="btn hearAboutUsBtn text-primary rounded-10" href="javascript:void(0)">Sign Board</a>
+                                    <input type="radio" id="hearAboutUs_sign_board" name="hearAboutUs" value="Sign Board">
+                                    <label for="hearAboutUs_sign_board">Sign Board</label>
                                 </div>
 
                                 <div class="col-6">
-                                    <a class="btn hearAboutUsBtn text-primary rounded-10" href="javascript:void(0)">Word of Mouth</a>
+                                    <input type="radio" id="hearAboutUs_word_of_mouth" name="hearAboutUs" value="Word of Mouth">
+                                    <label for="hearAboutUs_word_of_mouth">Word of Mouth</label>
                                 </div>
 
                                 <div class="col-6">
-                                    <a class="btn hearAboutUsBtn text-primary rounded-10" href="javascript:void(0)">Other</a>
+                                    <input type="radio" id="hearAboutUs_other" name="hearAboutUs" value="Other">
+                                    <label for="hearAboutUs_other">Other</label>
                                 </div>
                             </div>
                         </div>

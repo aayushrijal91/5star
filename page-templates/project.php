@@ -387,6 +387,36 @@ if ($post) {
         </section>
     <?php endif; ?>
 
+    <?php $about = get_field('about');
+    if (!empty($about['title'])) : ?>
+        <div class="pb-7">
+            <section class="about bg-primary pt-6">
+                <div class="container">
+                    <div class="row gx-0">
+                        <div class="col-lg-6 mb-n5 order-2 order-lg-1">
+                            <div class="content position-relative">
+                                <div class="background"></div>
+                                <div class="py-4 py-md-6 py-xl-7 px-3 px-xl-8 text-white position-relative">
+                                    <p class="fs-30 fs-md-48 fw-600 lh-1"><?= $about['title'] ?></p>
+
+                                    <article class="fs-18 fw-500 lh-1_67 mt-4 description">
+                                        <?= $about['description'] ?>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+
+                        <?php if (!empty($about['image'])) : ?>
+                            <div class="col-lg-6 mt-md-7 position-relative order-1 order-lg-2">
+                                <img class="rounded-10" src="<?= $about['image']['url'] ?>" alt="<?= $about['image']['alt'] ?>">
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </section>
+        </div>
+    <?php endif; ?>
+
     <?php $faqs = get_field('faqs');
     if (!empty($faqs['title'])) : ?>
         <section class="faq mt-5 mt-md-9 s">
