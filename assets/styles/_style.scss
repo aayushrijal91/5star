@@ -479,7 +479,7 @@ main.projectPage {
         .projectGalleryImageSlider {
             .slick-track {
                 display: flex;
-                height: 573px;
+                height: 877px;
 
                 @include media-breakpoint-down(sm) {
                     height: 250px;
@@ -490,6 +490,7 @@ main.projectPage {
                 height: inherit;
                 border-radius: 11px;
                 overflow: hidden;
+                background: $light-grey;
 
                 img {
                     width: 100%;
@@ -607,7 +608,7 @@ main.grannyFlatApprovalsPage {
         .projectGalleryImageSlider {
             .slick-track {
                 display: flex;
-                height: 573px;
+                height: 877px;
 
                 @include media-breakpoint-down(sm) {
                     height: 250px;
@@ -618,6 +619,7 @@ main.grannyFlatApprovalsPage {
                 height: inherit;
                 border-radius: 11px;
                 overflow: hidden;
+                background: $light-grey;
 
                 img {
                     width: 100%;
