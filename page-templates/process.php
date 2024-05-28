@@ -21,7 +21,6 @@ get_template_part('parts/section', 'banner');
                             <p class="fs-28 fs-md-48 text-primary fw-600 py-3 py-md-4"><?= get_sub_field('title') ?></p>
 
                             <article class="fs-16 description lh-1_67">
-                                <p class="text-primary"> To qualify 5 Star Granny Flats will require the below information</p>
                                 <?= get_sub_field('description') ?>
                             </article>
                         </div>

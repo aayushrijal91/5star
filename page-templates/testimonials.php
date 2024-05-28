@@ -28,9 +28,9 @@ get_template_part('parts/section', 'banner');
                     <?php endif; ?>
 
                     <?php if (!empty($introduction['description'])) : ?>
-                        <article class="fs-14 fs-md-18 py-4 text-white lh-1_67">
-                            <?= $introduction['title'] ?>
-                        </article>
+                        <p class="fs-14 fs-md-18 py-4 text-white lh-1_67">
+                            Hear from some of our satisfied customers.
+                        </p>
                     <?php endif; ?>
 
                     <div class="testimonialSlider">

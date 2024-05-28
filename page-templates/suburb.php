@@ -13,7 +13,7 @@ get_template_part('parts/section', 'banner');
             <div class="row align-items-center gx-0">
                 <div class="col-lg-6">
                     <div class="heroImage overflow-hidden">
-                        <img class="h-100 w-100 object-fit-cover" src="<?= get_template_directory_uri() ?>/assets/images/lib/eabb60846be430c681b519124eba2a14-min.jpg" alt="">
+                        <img class="h-100 w-100 object-fit-cover" src="<?= get_template_directory_uri() ?>/assets/images/lib/suburb.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -21,7 +21,7 @@ get_template_part('parts/section', 'banner');
                         <p class="fs-30 fs-md-48 font-poppins fw-600 lh-1">Granny Flat <?= the_title() ?></p>
 
                         <article class="description fs-18 lh-1_67 pt-4 pt-md-5">
-                            <p>Granny flats can be an excellent addition to your property. Not only do they serve as a great independent home for your elderly, but they also can be rented out for profit. Well-designed granny flats can considerably increase the value of your property and offer a good return on your investment. However, if you want great results, you need to hire great granny flat builder <?= the_title() ?> and that’s what you get at Granny Flat Sydney.</p>
+                            <p>Granny flats can be an excellent addition to your property. Not only do they serve as a great independent home for your elderly, but they also can be rented out for profit. Well-designed granny flats can considerably increase the value of your property and offer a good return on your investment. However, if you want great results, you need to hire a great granny flat builder in Abbotsbury and that’s what you get at 5 Star Granny Flats.</p>
                         </article>
                     </div>
                 </div>
@@ -39,7 +39,7 @@ get_template_part('parts/section', 'banner');
                 </div>
                 <div class="col-6">
                     <article class="lh-1_67 fs-14 fs-md-16 fs-lg-18">
-                        <p>we maintain full commitment to each job to ensure the project and build is delivered on time and to the budget without any compromise to our superior methods and personnel.</p>
+                        <p>We maintain full commitment to each job to ensure the project and build is delivered on time and to the budget without any compromise to our superior methods and personnel.</p>
                     </article>
                 </div>
             </div>
@@ -50,7 +50,7 @@ get_template_part('parts/section', 'banner');
                 </div>
                 <div class="col-6">
                     <article class="lh-1_67 fs-14 fs-md-16 fs-lg-18">
-                        <p>consistent communication is upheld from the signing of papers. Feedback during the process is always welcomed. We always take ownership of any hurdles that may arise and ensure we maintain the highest levels of customer satisfaction.</p>
+                        <p>Consistent communication is upheld from the signing of papers. Feedback during the process is always welcomed. We always take ownership of any hurdles that may arise and ensure we maintain the highest levels of customer satisfaction.</p>
                     </article>
                 </div>
             </div>
@@ -83,17 +83,17 @@ get_template_part('parts/section', 'banner');
         <div class="container">
             <div class="row justify-content-center g-4 d-md-none">
                 <div class="col-12">
-                    <img class="w-100 rounded-6" src="<?= get_template_directory_uri() ?>/assets/images/lib/696f5cb4fd822deeb515c3c80e80c96e.jpg" alt="">
+                    <img class="w-100 rounded-6" src="<?= get_template_directory_uri() ?>/assets/images/lib/suburb-2.jpg" alt="">
 
                     <p class="fs-24 fw-600 font-poppins py-3">Our Granny Flat Design Services</p>
 
                     <article class="fs-14 fw-500 lh-1_67">
-                        <p>Poorly designed granny flats aren’t just a bad investment; they stand out like a sore thumb on your property as well. They can compromise the value of your home and diminish its curb appeal, which is why you need outstanding designers. If you hire us, you get expert services from skilled and experienced granny flat builder <?= the_title() ?> so you won’t be disappointed with the results. We have pre-designed and custom design options available to you</p>
+                        <p>Poorly designed granny flats aren’t just a bad investment; they stand out like a sore thumb on your property as well. They can compromise the value of your home and diminish its curb appeal, which is why you need outstanding designers. If you hire us, you get expert services from a skilled and experienced granny flat builder in Abbotsbury so you won’t be disappointed with the results. We have pre-designed and custom design options available to you.</p>
                     </article>
                 </div>
 
                 <div class="col-12">
-                    <img class="w-100 rounded-6" src="<?= get_template_directory_uri() ?>/assets/images/lib/0b23b2ef25b8f735aaaec79c78ef217b.jpg" alt="">
+                    <img class="w-100 rounded-6" src="<?= get_template_directory_uri() ?>/assets/images/lib/suburb-3.jpg" alt="">
 
                     <p class="fs-24 fw-600 font-poppins py-3">One Bedroom Flats</p>
 
@@ -103,7 +103,7 @@ get_template_part('parts/section', 'banner');
                 </div>
 
                 <div class="col-12">
-                    <img class="w-100 rounded-6" src="<?= get_template_directory_uri() ?>/assets/images/lib/0c89224ddf5a77283e38ecf7ff330ccf.jpg" alt="">
+                    <img class="w-100 rounded-6" src="<?= get_template_directory_uri() ?>/assets/images/lib/suburb-4.jpg" alt="">
 
                     <p class="fs-24 fw-600 font-poppins py-3">Two Bedroom Flats</p>
 
@@ -113,7 +113,7 @@ get_template_part('parts/section', 'banner');
                 </div>
 
                 <div class="col-12">
-                    <img class="w-100 rounded-6" src="<?= get_template_directory_uri() ?>/assets/images/lib/696f5cb4fd822deeb515c3c80e80c96e.jpg" alt="">
+                    <img class="w-100 rounded-6" src="<?= get_template_directory_uri() ?>/assets/images/lib/suburb-2.jpg" alt="">
 
                     <p class="fs-24 fw-600 font-poppins py-3">Three Bedroom Flats</p>
 
@@ -125,7 +125,7 @@ get_template_part('parts/section', 'banner');
                 </div>
 
                 <div class="col-12">
-                    <img class="w-100 rounded-6" src="<?= get_template_directory_uri() ?>/assets/images/lib/0c89224ddf5a77283e38ecf7ff330ccf.jpg" alt="">
+                    <img class="w-100 rounded-6" src="<?= get_template_directory_uri() ?>/assets/images/lib/suburb-4.jpg" alt="">
 
                     <p class="fs-24 fw-600 font-poppins py-3">Custom Flats</p>
 
@@ -136,7 +136,7 @@ get_template_part('parts/section', 'banner');
 
                 <div class="col-xl-10">
                     <article class="text-center fs-16  fs-md-18 lh-1_67 mt-4 fw-500 text-dark-grey">
-                        <p>If you have questions and need to know more about our designs, you can visit our FAQ page or give us a call. Our experts are always willing to answer your questions and help in any way they can.</p>
+                    <p>If you have questions and need to know more about our <a href="<?= home_url() ?>/granny-flats/">designs</a>, you can visit our <a href="<?= home_url() ?>/faq/">FAQ page</a> or <a href="tel:<?= get_field('phone_number', 'options') ?>"><u>give us a call</u></a>. Our experts are always willing to answer your questions and help in any way they can.</p>
                     </article>
                 </div>
             </div>
@@ -144,13 +144,13 @@ get_template_part('parts/section', 'banner');
             <div class="row justify-content-center g-4 d-none d-md-flex">
                 <div class="col-12">
                     <div class="whyUsCard rounded-11 position-relative overflow-hidden">
-                        <img class="h-100 w-100 position-absolute top-0" src="<?= get_template_directory_uri() ?>/assets/images/lib/696f5cb4fd822deeb515c3c80e80c96e.jpg" alt="">
+                        <img class="h-100 w-100 object-fit-cover position-absolute top-0" src="<?= get_template_directory_uri() ?>/assets/images/lib/suburb-2.jpg" alt="">
 
                         <div class="overlay position-relative h-100 p-5 text-white d-flex align-items-end">
                             <div>
                                 <p class="fs-30 fw-600 font-poppins">Our Granny Flat Design Services</p>
                                 <p class="fs-18 fw-500 pt-3 lh-1_67">
-                                    Poorly designed granny flats aren’t just a bad investment; they stand out like a sore thumb on your property as well. They can compromise the value of your home and diminish its curb appeal, which is why you need outstanding designers. If you hire us, you get expert services from skilled and experienced granny flat builder <?= the_title() ?> so you won’t be disappointed with the results. We have pre-designed and custom design options available to you
+                                    Poorly designed granny flats aren’t just a bad investment; they stand out like a sore thumb on your property as well. They can compromise the value of your home and diminish its curb appeal, which is why you need outstanding designers. If you hire us, you get expert services from a skilled and experienced granny flat builder in Abbotsbury so you won’t be disappointed with the results. We have pre-designed and custom design options available to you.
                                 </p>
                             </div>
                         </div>
@@ -159,7 +159,7 @@ get_template_part('parts/section', 'banner');
 
                 <div class="col-lg-6">
                     <div class="whyUsCard rounded-11 position-relative overflow-hidden">
-                        <img class="h-100 w-100 position-absolute top-0" src="<?= get_template_directory_uri() ?>/assets/images/lib/0b23b2ef25b8f735aaaec79c78ef217b.jpg" alt="">
+                        <img class="h-100 w-100 object-fit-cover position-absolute top-0" src="<?= get_template_directory_uri() ?>/assets/images/lib/suburb-3.jpg" alt="">
 
                         <div class="overlay position-relative h-100 p-5 text-white d-flex align-items-end">
                             <div>
@@ -174,7 +174,7 @@ get_template_part('parts/section', 'banner');
 
                 <div class="col-lg-6">
                     <div class="whyUsCard rounded-11 position-relative overflow-hidden">
-                        <img class="h-100 w-100 position-absolute top-0" src="<?= get_template_directory_uri() ?>/assets/images/lib/0c89224ddf5a77283e38ecf7ff330ccf.jpg" alt="">
+                        <img class="h-100 w-100 object-fit-cover position-absolute top-0" src="<?= get_template_directory_uri() ?>/assets/images/lib/suburb-4.jpg" alt="">
 
                         <div class="overlay position-relative h-100 p-5 text-white d-flex align-items-end">
                             <div>
@@ -189,7 +189,7 @@ get_template_part('parts/section', 'banner');
 
                 <div class="col-lg-6 col-xl-5">
                     <div class="whyUsCard rounded-11 position-relative overflow-hidden">
-                        <img class="h-100 w-100 position-absolute top-0" src="<?= get_template_directory_uri() ?>/assets/images/lib/696f5cb4fd822deeb515c3c80e80c96e.jpg" alt="">
+                        <img class="h-100 w-100 object-fit-cover position-absolute top-0" src="<?= get_template_directory_uri() ?>/assets/images/lib/suburb-2.jpg" alt="">
 
                         <div class="overlay position-relative h-100 p-5 text-white d-flex align-items-end">
                             <div>
@@ -204,7 +204,7 @@ get_template_part('parts/section', 'banner');
 
                 <div class="col-lg-6 col-xl-7">
                     <div class="whyUsCard rounded-11 position-relative overflow-hidden">
-                        <img class="h-100 w-100 position-absolute top-0" src="<?= get_template_directory_uri() ?>/assets/images/lib/0c89224ddf5a77283e38ecf7ff330ccf.jpg" alt="">
+                        <img class="h-100 w-100 object-fit-cover position-absolute top-0" src="<?= get_template_directory_uri() ?>/assets/images/lib/suburb-4.jpg" alt="">
 
                         <div class="overlay position-relative h-100 p-5 text-white d-flex align-items-end">
                             <div class="">
@@ -219,7 +219,7 @@ get_template_part('parts/section', 'banner');
 
                 <div class="col-xl-10">
                     <article class="text-center fs-18 lh-1_67 mt-4 fw-500 text-dark-grey">
-                        <p>If you have questions and need to know more about our designs, you can visit our FAQ page or give us a call. Our experts are always willing to answer your questions and help in any way they can.</p>
+                        <p>If you have questions and need to know more about our <a href="<?= home_url() ?>/granny-flats/">designs</a>, you can visit our <a href="<?= home_url() ?>/faq/">FAQ page</a> or <a href="tel:<?= get_field('phone_number', 'options') ?>"><u>give us a call</u></a>. Our experts are always willing to answer your questions and help in any way they can.</p>
                     </article>
                 </div>
             </div>
@@ -293,7 +293,7 @@ get_template_part('parts/section', 'banner');
 
                         <p class="fs-20 fs-md-25 font-roboto text-black fw-500 py-4">Phase 2</p>
 
-                        <p class="text-grey fs-14 fs-md-18 lh-1_67">one of our expert team members will come out to the property for a free site visit and consultation. We will discuss your desired granny flat construction in <?= the_title() ?></p>
+                        <p class="text-grey fs-14 fs-md-18 lh-1_67">one of our expert team members will come out to the property for a free site visit and consultation. We will discuss your desired granny flat construction in <?= the_title() ?>.</p>
                     </div>
                 </div>
 
@@ -339,7 +339,7 @@ get_template_part('parts/section', 'banner');
 
                         <p class="fs-20 fs-md-25 font-roboto text-black fw-500 py-4">Phase 4</p>
 
-                        <p class="text-grey fs-14 fs-md-18 lh-1_67">you can either choose from the state-of-the-art designs that we offer all our clients of we can work together with a draftsman to develop a custom solution to suit your needs. Once that is complete, we will handle the certified approval for your granny flat in <?= the_title() ?></p>
+                        <p class="text-grey fs-14 fs-md-18 lh-1_67">you can either choose from the state-of-the-art designs that we offer all our clients or we can work together with a draftsman to develop a custom solution to suit your needs. Once that is complete, we will handle the certified approval for your granny flat in <?= the_title() ?>.</p>
                     </div>
                 </div>
 
@@ -353,13 +353,13 @@ get_template_part('parts/section', 'banner');
 
                         <p class="fs-20 fs-md-25 font-roboto text-black fw-500 py-4">Phase 5</p>
 
-                        <p class="text-grey fs-14 fs-md-18 lh-1_67">we will commence a built with a team of qualified subcontractors which are all managed by our site supervisors to ensure high-quality workmanship and each phase of construction is complete within the timely matter we provide.</p>
+                        <p class="text-grey fs-14 fs-md-18 lh-1_67">we will begin construction with a team of qualified subcontractors, all managed by our experienced site supervisors. This approach guarantees high-quality workmanship and ensures that every phase of the construction is completed promptly and according to schedule.</p>
                     </div>
                 </div>
 
                 <div class="col-12 col-md-6 col-xl-4">
                     <div class="processCard bg-primary rounded-7 h-100 d-flex flex-column align-items-center justify-content-center text-center px-3 px-md-6 py-5">
-                        <p class="fs-25 font-roboto text-white fw-300">Our goal is to always deliver seamless service and outstanding results for your granny flat Builders <?= the_title() ?></p>
+                        <p class="fs-25 font-roboto text-white fw-300">Our goal is to always deliver seamless service and outstanding results as your granny flat Builders in <?= the_title() ?>.</p>
                     </div>
                 </div>
             </div>
@@ -381,14 +381,14 @@ get_template_part('parts/section', 'banner');
                 </div>
                 <div class="col-12 col-xl-6 text-white">
                     <ul class="d-flex flex-column gap-4 py-5 py-md-3 ps-0 ps-md-4">
-                        <li>
+                        <li>\\
                             <p class="fs-24 fs-md-38 font-poppins lh-1">Quality</p>
                             <p class="fs-14 fs-md-18 lh-1_67 pt-4">We always focus on quality, regardless of the budget because we want to build sturdy and long-lasting flats. We use the best possible materials and double-check everything to ensure you don’t face any problems down the line.</p>
                         </li>
 
                         <li>
                             <p class="fs-24 fs-md-38 font-poppins lh-1">Pricing</p>
-                            <p class="fs-14 fs-md-18 lh-1_67 pt-4">Our billing is honest and straightforward so you don’t have to worry about any hidden costs. Our rates are very reasonable and we’re one of the most affordable granny flat builders <?= the_title() ?>.</p>
+                            <p class="fs-14 fs-md-18 lh-1_67 pt-4">Our billing is honest and straightforward so you don’t have to worry about any hidden costs. Our rates are very reasonable and we’re one of the most affordable granny flat builders in <?= the_title() ?>.</p>
                         </li>
 
                         <li>
@@ -408,16 +408,16 @@ get_template_part('parts/section', 'banner');
                     <p class="fs-30 fs-md-48 text-black highlight-white lh-1 font-poppins fw-600"><span>Granny Flat Plans</span><br /> and Prices</p>
 
                     <article class="description fs-18 text-white pt-4 lh-1_67">
-                        <p>Are you at that stage where you’re seriously considering a granny flat? All it has come to is the cost? Calling the right granny flat builder in <?= the_title() ?> will help you understand the cost of your granny flat with its inclusions. Certain factors you can take into consideration is how many guests is this dwelling hosting? Is it for your elderly parents? Or is it an investment? Granny flats are an easy source of some extra income if you decide to rent it out.</p>
+                        <p>Are you at that stage where you’re seriously considering a granny flat? Has it all come down to the cost? Calling the right granny flat builder in <?= the_title() ?> will help you understand the cost of your granny flat with all its inclusions. Certain factors you can take into consideration are how many guests this dwelling will host and who it is for: Is it for your elderly parents? Your adult children? Or is it an investment? Granny flats are an easy source of some extra income if you decide to rent yours out.</p>
                         <p>When building a granny flat in <?= the_title() ?> there is a range of styles to choose from that will all vary in price the main factors will include, size of a granny flat, condition of the land and the finishes.</p>
-                        <p>A factor that should come to mind when cutting costs in a build of a granny fat <?= the_title() ?> is ensuring you are not losing the quality of workmanship and in the structure of the granny flat. Our team of experts can build studio’s, 1 bedroom granny flats, 2 bedroom granny flats, 3 bedroom granny flats, granny flats with pools, two-storey granny flats and granny flats with a side studio.</p>
+                        <p>A factor that should come to mind when cutting costs in a build of a granny flat in <?= the_title() ?> is ensuring you are not sacrificing the quality of workmanship and the structure of the granny flat. Our team of experts can build studios, 1 bedroom granny flats, 2 bedroom granny flats, 3 bedroom granny flats, granny flats with pools, two-storey granny flats and granny flats with a side studio.</p>
                         <p>In our free onsite consultations, we will explain process and pricing options as we are competitive and transparent during the whole process and communication is kept at an all-time high.</p>
-                        <p>We are expert granny flat builder <?= the_title() ?> and can create an ideal flat for you. If you want to know more, you can get in touch with us at 5 Star Granny Flats by calling 1300 843 921 or filling in this contact us form. You can also use this form to get a quick online quote.</p>
+                        <p>We are expert granny flat builders in <?= the_title() ?> and can create an ideal flat for you. If you want to know more, you can get in touch with us at 5 Star Granny Flats by calling <a href="tel:<?= get_field('phone_number', 'options') ?>" class="text-tertiary"><u><?= get_field('phone_number', 'options') ?></u></a> or filling in this contact us form. We provide free on-site consultations and no-obligation quotes.</p>
                     </article>
                 </div>
 
                 <div class="col-12 col-lg-6 order-1 order-lg-2">
-                    <img class="w-100 h-100 object-fit-cover" src="<?= get_template_directory_uri() ?>/assets/images/lib/eabb60846be430c681b519124eba2a14-min.jpg" alt="">
+                    <img class="w-100 h-100 object-fit-cover" src="<?= get_template_directory_uri() ?>/assets/images/lib/suburb.jpg" alt="">
                 </div>
             </div>
         </div>

@@ -5,7 +5,7 @@
             <div class="col-12 col-lg">
                 <div class="col-xl-9 mx-auto text-white">
                     <?php if (!empty($footer['display_home_title'])) : ?>
-                        <p class="fs-30 fs-md-48 fw-600 highlight-primary lh-1"><?= $footer['display_home_title'] ?></p>
+                        <p class="fs-30 fs-md-48 fw-600 highlight-primary lh-1 text-capitalize"><?= $footer['display_home_title'] ?></p>
                     <?php endif; ?>
 
                     <?php if (!empty($footer['display_home_description'])) : ?>
