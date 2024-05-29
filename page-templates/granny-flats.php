@@ -296,7 +296,7 @@ get_template_part('parts/section', 'banner');
 
                                         <article class="fs-14 fs-md-18 text-light-grey pt-1 pb-4 lh-1_67"><?= $content ?></article>
 
-                                        <a href="" class="text-white btn btn-primary rounded-8 fs-14 fs-md-18">View Property Details</a>
+                                        <a href="<?= get_field('link')['url'] ?>" class="text-white btn btn-primary rounded-8 fs-14 fs-md-18">View Property Details</a>
                                     </div>
                                 </div>
                             </div>
